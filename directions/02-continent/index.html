@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Silver Fox Horizons</title>
+  <meta name="description" content="Silver Fox Horizons is an international strategic advisory firm partnering with governments, institutions and businesses across Africa.">
+  <meta name="theme-color" content="#07080A">
+  <script>document.documentElement.classList.add('js');setTimeout(function(){if(!window.__sfh){document.documentElement.classList.add('js-failed');}},3000);</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,300;1,6..72,400&display=swap">
+  <link rel="preload" href="assets/africa-countries.geo.json" as="fetch" type="application/json" crossorigin>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js" defer></script>
+  <script src="main.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-header" id="header">
+    <div class="wrap header__inner">
+      <a class="brand" href="#top" aria-label="Silver Fox Horizons, back to top">
+        <svg class="brand__mark" viewBox="0 0 14 14" aria-hidden="true" focusable="false">
+          <circle cx="2" cy="2" r="1" /><circle cx="7" cy="2" r="1" /><circle cx="12" cy="2" r="1" />
+          <circle cx="2" cy="7" r="1" /><circle class="on" cx="7" cy="7" r="1.6" /><circle cx="12" cy="7" r="1" />
+          <circle cx="2" cy="12" r="1" /><circle cx="7" cy="12" r="1" /><circle cx="12" cy="12" r="1" />
+        </svg>
+        <span class="brand__name">Silver Fox Horizons</span>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <ul>
+          <li><a href="#about"><span class="nav__i" aria-hidden="true">01</span>About</a></li>
+          <li><a href="#expertise"><span class="nav__i" aria-hidden="true">02</span>Expertise</a></li>
+          <li><a href="#insights"><span class="nav__i" aria-hidden="true">03</span>Insights</a></li>
+          <li><a href="#contact"><span class="nav__i" aria-hidden="true">04</span>Contact</a></li>
+        </ul>
+      </nav>
+      <a class="btn btn--line header__cta" href="#contact">Get in Touch</a>
+      <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu">
+        <span class="menu-btn__label">Menu</span>
+        <span class="menu-btn__icon" aria-hidden="true"><i></i><i></i></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="menu" id="menu" hidden>
+    <nav class="wrap menu__inner" aria-label="Mobile">
+      <p class="mono menu__meta" aria-hidden="true">Index</p>
+      <ul>
+        <li><a href="#about"><span class="mono">01</span>About</a></li>
+        <li><a href="#expertise"><span class="mono">02</span>Expertise</a></li>
+        <li><a href="#insights"><span class="mono">03</span>Insights</a></li>
+        <li><a href="#contact"><span class="mono">04</span>Contact</a></li>
+      </ul>
+      <a class="btn btn--gold menu__cta" href="#contact">Get in Touch</a>
+      <p class="menu__foot mono">Strategic Advisory &middot; Global Perspective &middot; African Focus</p>
+    </nav>
+  </div>
+
+  <main id="main">
+
+    <!-- ============ STORY: the map is the spine ============ -->
+    <div class="story" id="story">
+      <div class="story__steps">
+
+        <section class="step step--hero" id="top" data-state="hero" aria-labelledby="hero-title">
+          <div class="step__text">
+            <p class="kicker reveal"><span class="kicker__i">00</span>Strategic advisory &middot; Africa</p>
+            <h1 class="display" id="hero-title">
+              <span class="ln"><span>Shaping</span></span>
+              <span class="ln"><span>Africa&rsquo;s</span></span>
+              <span class="ln"><span>Future.</span></span>
+              <span class="ln ln--sub"><span>Connecting Global Opportunity.</span></span>
+            </h1>
+            <p class="lead reveal">We work at the intersection of statecraft, international positioning and investment diplomacy.</p>
+            <div class="hero__actions reveal">
+              <a class="btn btn--gold" href="#contact">Get in Touch</a>
+              <a class="link-arrow" href="#mandate">Read the mandate <span aria-hidden="true">&darr;</span></a>
+            </div>
+          </div>
+          <figure class="step__map" data-view="hero">
+            <canvas class="map-canvas" role="img" aria-label="Map of Africa drawn in gold dots."></canvas>
+            <figcaption class="readout-line mono" aria-hidden="true" data-live-line>06&deg;31&prime;N 03&deg;22&prime;E &middot; LAGOS &middot; &mdash;</figcaption>
+          </figure>
+          <div class="hero__foot mono" aria-hidden="true"><span class="hero__tick"></span>Scroll &middot; three areas of expertise</div>
+        </section>
+
+        <section class="step step--mandate" id="mandate" data-state="mandate" aria-labelledby="mandate-label">
+          <div class="step__text">
+            <p class="kicker reveal" id="mandate-label"><span class="kicker__i">M</span>Mandate</p>
+            <p class="mandate reveal">Silver Fox Horizons is an international strategic advisory firm partnering with governments, institutions and businesses to <a class="mandate__k" href="#expertise" data-preview="gov">strengthen state capacity<sup>01</sup></a>, <a class="mandate__k" href="#positioning" data-preview="pos">elevate global influence<sup>02</sup></a> and <a class="mandate__k" href="#investment" data-preview="inv">unlock investment opportunities<sup>03</sup></a> across Africa.</p>
+            <p class="mono note reveal">Hover an index to preview it on the map.</p>
+          </div>
+        </section>
+
+        <section class="expertise" id="expertise" aria-labelledby="expertise-title">
+          <h2 class="sr-only" id="expertise-title">Expertise</h2>
+
+          <article class="step step--chapter" id="governance" data-state="gov" aria-labelledby="gov-title">
+            <div class="step__text">
+              <p class="kicker reveal"><span class="kicker__i">01 / 03</span>Expertise</p>
+              <h3 class="h-chapter" id="gov-title">
+                <span class="ln"><span>Statecraft, Governance</span></span>
+                <span class="ln"><span>&amp; Institutional</span></span>
+                <span class="ln"><span>Transformation</span></span>
+              </h3>
+              <p class="body reveal">Helping governments strengthen institutional capacity, design and implement reforms, and improve public-sector performance.</p>
+              <figure class="plate reveal">
+                <div class="plate__img"><img src="assets/gen-parliament.webp" width="2000" height="1130" loading="lazy" decoding="async" alt="A pale stone colonnade at golden hour, with two people in suits climbing the steps."></div>
+                <figcaption class="mono"><span>Plate I</span><span>Seat of government</span><span>Late afternoon</span></figcaption>
+              </figure>
+            </div>
+            <figure class="step__map" data-view="gov">
+              <canvas class="map-canvas" role="img" aria-label="Map of Africa with national capitals marked: Rabat, Cairo, Dakar, Abuja, Accra, Addis Ababa, Nairobi, Kigali, Kinshasa, Luanda and Pretoria."></canvas>
+              <figcaption class="readout readout--static mono" aria-hidden="true" data-readout="gov"></figcaption>
+            </figure>
+          </article>
+
+          <article class="step step--chapter" id="positioning" data-state="pos" aria-labelledby="pos-title">
+            <div class="step__text">
+              <p class="kicker reveal"><span class="kicker__i">02 / 03</span>Expertise</p>
+              <h3 class="h-chapter" id="pos-title">
+                <span class="ln"><span>Nation Branding,</span></span>
+                <span class="ln"><span>Strategic Communications</span></span>
+                <span class="ln"><span>&amp; Global Positioning</span></span>
+              </h3>
+              <p class="body reveal">Supporting governments in strengthening their international reputation, soft power and global visibility.</p>
+              <figure class="plate reveal">
+                <div class="plate__img"><img src="assets/gen-skyline-bluehour.webp" width="2000" height="1130" loading="lazy" decoding="async" alt="A capital skyline at blue hour, a glass tower lit against green hills."></div>
+                <figcaption class="mono"><span>Plate II</span><span>Capital skyline</span><span>Blue hour</span></figcaption>
+              </figure>
+            </div>
+            <figure class="step__map" data-view="pos">
+              <canvas class="map-canvas" role="img" aria-label="Map of Africa with great-circle arcs drawn from African capitals to London, Brussels, Dubai, New York, Washington and Beijing."></canvas>
+              <figcaption class="readout readout--static mono" aria-hidden="true" data-readout="pos"></figcaption>
+            </figure>
+          </article>
+
+          <article class="step step--chapter" id="investment" data-state="inv" aria-labelledby="inv-title">
+            <div class="step__text">
+              <p class="kicker reveal"><span class="kicker__i">03 / 03</span>Expertise</p>
+              <h3 class="h-chapter" id="inv-title">
+                <span class="ln"><span>Investment Diplomacy,</span></span>
+                <span class="ln"><span>Market Access &amp;</span></span>
+                <span class="ln"><span>Strategic Partnerships</span></span>
+              </h3>
+              <p class="body reveal">Helping international companies and investors navigate African markets, engage with governments and develop strategic investment and commercial partnerships.</p>
+              <figure class="plate reveal">
+                <div class="plate__img"><img src="assets/gen-port.webp" width="2000" height="1130" loading="lazy" decoding="async" alt="Container cranes and a loaded cargo ship at a port at sunset."></div>
+                <figcaption class="mono"><span>Plate III</span><span>Container terminal</span><span>Dusk</span></figcaption>
+              </figure>
+            </div>
+            <figure class="step__map" data-view="inv">
+              <canvas class="map-canvas" role="img" aria-label="Map of Africa with corridors linking Casablanca, Cairo, Accra, Lagos, Abuja, Addis Ababa, Nairobi, Kigali and Johannesburg."></canvas>
+              <figcaption class="readout readout--static mono" aria-hidden="true" data-readout="inv"></figcaption>
+            </figure>
+          </article>
+        </section>
+
+        <section class="step step--reach" id="reach" data-state="all" aria-labelledby="reach-title">
+          <div class="step__text">
+            <p class="kicker reveal"><span class="kicker__i">04</span>In figures</p>
+            <h2 class="h-chapter" id="reach-title"><span class="ln"><span>Reach</span></span></h2>
+            <dl class="figures">
+              <div class="figure reveal">
+                <dt class="mono"><span class="figure__i">R.01</span>African countries engaged</dt>
+                <dd class="figure__n"><span data-count="24" data-dec="0">24</span></dd>
+              </div>
+              <div class="figure reveal">
+                <dt class="mono"><span class="figure__i">R.02</span>Investment facilitated</dt>
+                <dd class="figure__n"><small class="pre">$</small><span data-count="6.8" data-dec="1">6.8</span><small>B</small></dd>
+              </div>
+              <div class="figure reveal">
+                <dt class="mono"><span class="figure__i">R.03</span>Reform programmes supported</dt>
+                <dd class="figure__n"><span data-count="60" data-dec="0">60</span><small>+</small></dd>
+              </div>
+              <div class="figure reveal">
+                <dt class="mono"><span class="figure__i">R.04</span>Years at the centre of government</dt>
+                <dd class="figure__n"><span data-count="15" data-dec="0">15</span></dd>
+              </div>
+            </dl>
+            <p class="mono note reveal">Demo figures for this design concept.</p>
+          </div>
+        </section>
+      </div>
+
+      <!-- Pinned instrument panel (desktop, motion allowed) -->
+      <div class="story__stage" aria-hidden="true">
+        <div class="stage">
+          <canvas class="stage__canvas"></canvas>
+          <div class="hud hud--tl mono">
+            <span class="hud__fig" data-hud="fig">Fig. 00</span>
+            <span class="hud__title" data-hud="title">Continental view</span>
+          </div>
+          <div class="hud hud--tr mono">
+            <span data-hud="count">00 / 03</span>
+            <span class="hud__bar"><i data-hud="bar"></i></span>
+          </div>
+          <div class="hud hud--bl readout mono" data-hud="readout"></div>
+          <div class="hud hud--br mono">
+            <span class="scalebar"><i data-hud="scale"></i><b>1,000 km</b></span>
+            <span>Natural Earth I &middot; 0.7&deg; grid</span>
+            <span data-hud="pts">&mdash; points</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="about" id="about" aria-labelledby="about-title">
+      <div class="wrap grid">
+        <p class="kicker about__k reveal"><span class="kicker__i">05</span>About</p>
+        <h2 class="h-statement about__title" id="about-title">
+          <span class="ln"><span>We work alongside the people</span></span>
+          <span class="ln"><span>shaping Africa&rsquo;s next chapter.</span></span>
+        </h2>
+        <figure class="plate about__plate reveal">
+          <div class="plate__img"><img src="assets/gen-state-room.webp" width="2000" height="1130" loading="lazy" decoding="async" alt="An empty walnut meeting table with leather chairs, light falling through tall windows."></div>
+          <figcaption class="mono"><span>Plate V</span><span>Meeting room</span><span>Morning</span></figcaption>
+        </figure>
+        <div class="about__body">
+          <p class="body body--lg reveal">We bring policy, communications and commercial experience together, so that reform, reputation and investment move in the same direction.</p>
+          <ol class="values" aria-label="Values">
+            <li class="reveal"><span class="mono">V.01</span><span class="values__t">Trusted Advisor</span></li>
+            <li class="reveal"><span class="mono">V.02</span><span class="values__t">Global Perspective</span></li>
+            <li class="reveal"><span class="mono">V.03</span><span class="values__t">African Focus</span></li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ APPROACH ============ -->
+    <section class="approach" id="approach" aria-labelledby="approach-title">
+      <div class="wrap">
+        <div class="sec-head">
+          <p class="kicker reveal"><span class="kicker__i">06</span>Method</p>
+          <h2 class="h-section" id="approach-title"><span class="ln"><span>Approach</span></span></h2>
+        </div>
+        <div class="route" aria-hidden="true"><span class="route__line"></span><i></i><i></i><i></i><i></i></div>
+        <ol class="steps">
+          <li class="reveal">
+            <span class="mono steps__i">01</span>
+            <h3 class="steps__t">Understand</h3>
+            <p>We start with the context: the institutions, the people and what has already been tried.</p>
+          </li>
+          <li class="reveal">
+            <span class="mono steps__i">02</span>
+            <h3 class="steps__t">Strategise</h3>
+            <p>We agree clear priorities and a realistic plan to reach them.</p>
+          </li>
+          <li class="reveal">
+            <span class="mono steps__i">03</span>
+            <h3 class="steps__t">Partner</h3>
+            <p>We work alongside your teams and bring in the right partners.</p>
+          </li>
+          <li class="reveal">
+            <span class="mono steps__i">04</span>
+            <h3 class="steps__t">Deliver</h3>
+            <p>We stay through implementation and measure what changes.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ INSIGHTS ============ -->
+    <section class="insights" id="insights" aria-labelledby="insights-title">
+      <div class="wrap">
+        <div class="sec-head">
+          <p class="kicker reveal"><span class="kicker__i">07</span>Sample articles</p>
+          <h2 class="h-section" id="insights-title"><span class="ln"><span>Insights</span></span></h2>
+        </div>
+        <ul class="articles">
+          <li class="article reveal">
+            <a href="#" class="article__link">
+              <span class="article__date mono"><time datetime="2026-11-12">12 Nov 2026</time></span>
+              <span class="article__cat mono">Governance</span>
+              <span class="article__main">
+                <span class="article__title">Building Delivery Units That Outlast an Election Cycle</span>
+                <span class="article__dek">What keeps a central delivery unit effective when leadership changes.</span>
+              </span>
+              <span class="article__go mono" aria-hidden="true">Read <span>&rarr;</span></span>
+            </a>
+          </li>
+          <li class="article reveal">
+            <a href="#" class="article__link">
+              <span class="article__date mono"><time datetime="2026-10-28">28 Oct 2026</time></span>
+              <span class="article__cat mono">Investment</span>
+              <span class="article__main">
+                <span class="article__title">Engaging African Governments as an Investor</span>
+                <span class="article__dek">Practical lessons for companies entering markets where the state is a key partner.</span>
+              </span>
+              <span class="article__go mono" aria-hidden="true">Read <span>&rarr;</span></span>
+            </a>
+          </li>
+          <li class="article reveal">
+            <a href="#" class="article__link">
+              <span class="article__date mono"><time datetime="2026-10-09">9 Oct 2026</time></span>
+              <span class="article__cat mono">Nation Branding</span>
+              <span class="article__main">
+                <span class="article__title">Reputation as a National Asset</span>
+                <span class="article__dek">Why a country&rsquo;s global image is built by its institutions, not its slogans.</span>
+              </span>
+              <span class="article__go mono" aria-hidden="true">Read <span>&rarr;</span></span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="contact" id="contact" aria-labelledby="contact-title">
+      <div class="wrap grid">
+        <div class="contact__main">
+          <p class="kicker reveal"><span class="kicker__i">08</span>Contact</p>
+          <h2 class="display display--contact" id="contact-title">
+            <span class="ln"><span>Let&rsquo;s Build</span></span>
+            <span class="ln"><span>What&rsquo;s Next.</span></span>
+          </h2>
+          <p class="body body--lg reveal">Tell us what you are working on. We will tell you honestly how we can help.</p>
+          <a class="btn btn--gold btn--lg reveal" href="#">Contact Us</a>
+        </div>
+        <figure class="contact__map reveal" data-view="all">
+          <canvas class="map-canvas" role="img" aria-label="Small dot map of Africa with capitals and corridors marked."></canvas>
+          <figcaption class="clocks mono" aria-label="Local times">
+            <span class="clocks__head" aria-hidden="true"><i></i>Local time</span>
+            <span data-tz="Africa/Lagos" data-city="Lagos"><b>Lagos</b><time>--:--</time></span>
+            <span data-tz="Africa/Nairobi" data-city="Nairobi"><b>Nairobi</b><time>--:--</time></span>
+            <span data-tz="Africa/Johannesburg" data-city="Johannesburg"><b>Johannesburg</b><time>--:--</time></span>
+            <span data-tz="Africa/Cairo" data-city="Cairo"><b>Cairo</b><time>--:--</time></span>
+            <span data-tz="Europe/London" data-city="London"><b>London</b><time>--:--</time></span>
+            <span data-tz="America/New_York" data-city="New York"><b>New York</b><time>--:--</time></span>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer__top">
+        <a class="brand brand--footer" href="#top" aria-label="Silver Fox Horizons, back to top">
+          <svg class="brand__mark" viewBox="0 0 14 14" aria-hidden="true" focusable="false">
+            <circle cx="2" cy="2" r="1" /><circle cx="7" cy="2" r="1" /><circle cx="12" cy="2" r="1" />
+            <circle cx="2" cy="7" r="1" /><circle class="on" cx="7" cy="7" r="1.6" /><circle cx="12" cy="7" r="1" />
+            <circle cx="2" cy="12" r="1" /><circle cx="7" cy="12" r="1" /><circle cx="12" cy="12" r="1" />
+          </svg>
+          <span class="brand__name">Silver Fox Horizons</span>
+        </a>
+        <p class="footer__tag">Strategic Advisory &middot; Global Perspective &middot; African Focus.</p>
+      </div>
+      <div class="footer__row">
+        <nav aria-label="Footer">
+          <ul class="footer__links mono">
+            <li><a href="#about">About</a></li>
+            <li><a href="#expertise">Expertise</a></li>
+            <li><a href="#insights">Insights</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <a class="footer__social" href="#" aria-label="Silver Fox Horizons on LinkedIn">
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
+        </a>
+      </div>
+      <div class="footer__base mono">
+        <span>&copy; 2026 Silver Fox Horizons</span>
+        <span>Design concept. Figures and articles are placeholders.</span>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

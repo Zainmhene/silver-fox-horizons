@@ -1,0 +1,427 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Silver Fox Horizons</title>
+<meta name="description" content="Silver Fox Horizons is an international strategic advisory firm partnering with governments, institutions and businesses across Africa.">
+<meta name="theme-color" content="#0A1612">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230A1612'/%3E%3Ccircle cx='16' cy='16' r='12' fill='none' stroke='%23C7A35B' stroke-width='1.5'/%3E%3Ccircle cx='16' cy='16' r='7' fill='none' stroke='%23C7A35B' stroke-width='1'/%3E%3Ccircle cx='16' cy='16' r='2' fill='%23EDE5D3'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&family=Libre+Caslon+Display&family=Libre+Caslon+Text:ital,wght@0,400;1,400&display=swap">
+<link rel="stylesheet" href="style.css">
+<script>
+  document.documentElement.classList.add('js');
+  /* Failsafe: if main.js never runs, show everything. */
+  setTimeout(function () { if (!window.__sfhReady) document.documentElement.classList.remove('js'); }, 2500);
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- Shared SVG definitions: tritone engraving filter, emboss, hatch -->
+<svg class="defs" width="0" height="0" aria-hidden="true" focusable="false">
+  <defs>
+    <filter id="tritone" color-interpolation-filters="sRGB">
+      <feColorMatrix type="matrix" values="0.2126 0.7152 0.0722 0 0  0.2126 0.7152 0.0722 0 0  0.2126 0.7152 0.0722 0 0  0 0 0 1 0"/>
+      <feComponentTransfer>
+        <feFuncR type="table" tableValues="0.039 0.118 0.478 0.812 0.953"/>
+        <feFuncG type="table" tableValues="0.086 0.200 0.392 0.675 0.918"/>
+        <feFuncB type="table" tableValues="0.071 0.157 0.224 0.392 0.835"/>
+      </feComponentTransfer>
+    </filter>
+    <filter id="emboss" x="-15%" y="-15%" width="130%" height="130%" color-interpolation-filters="sRGB">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="1.4" result="blur"/>
+      <feSpecularLighting in="blur" surfaceScale="3" specularConstant="0.85" specularExponent="22" lighting-color="#F6E7BF" result="spec">
+        <feDistantLight azimuth="225" elevation="38"/>
+      </feSpecularLighting>
+      <feComposite in="spec" in2="SourceAlpha" operator="in" result="specIn"/>
+      <feOffset in="SourceAlpha" dx="1.4" dy="1.8" result="off"/>
+      <feGaussianBlur in="off" stdDeviation="1.6" result="offBlur"/>
+      <feColorMatrix in="offBlur" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.75 0" result="shadow"/>
+      <feComposite in="SourceGraphic" in2="specIn" operator="arithmetic" k1="0" k2="1" k3="0.55" k4="0" result="lit"/>
+      <feMerge><feMergeNode in="shadow"/><feMergeNode in="lit"/></feMerge>
+    </filter>
+  </defs>
+</svg>
+
+<header class="site-header" id="header">
+  <div class="wrap header__inner">
+    <a class="brand" href="#top" aria-label="Silver Fox Horizons, back to top">
+      <svg class="brand__mark" viewBox="-50 -50 100 100" aria-hidden="true" focusable="false" data-mark></svg>
+      <span class="brand__name">Silver Fox Horizons</span>
+    </a>
+    <nav class="nav" aria-label="Primary">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#expertise">Expertise</a></li>
+        <li><a href="#insights">Insights</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn--ghost btn--sm header__cta" href="#contact">Get in Touch</a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu">
+      <span class="menu-btn__label">Menu</span>
+      <span class="menu-btn__icon" aria-hidden="true"><span></span><span></span></span>
+    </button>
+  </div>
+</header>
+
+<div class="menu" id="menu" role="dialog" aria-modal="true" aria-label="Site menu" hidden>
+  <div class="menu__inner wrap">
+    <ol class="menu__list">
+      <li><a href="#about"><span class="menu__no">01</span>About</a></li>
+      <li><a href="#expertise"><span class="menu__no">02</span>Expertise</a></li>
+      <li><a href="#insights"><span class="menu__no">03</span>Insights</a></li>
+      <li><a href="#contact"><span class="menu__no">04</span>Contact</a></li>
+    </ol>
+    <a class="btn btn--foil menu__cta" href="#contact">Get in Touch</a>
+    <div class="menu__band band" aria-hidden="true" data-menu-band></div>
+    <p class="menu__micro" aria-hidden="true">Silver Fox Horizons · Strategic Advisory · Global Perspective · African Focus</p>
+  </div>
+</div>
+
+<main id="main">
+
+  <!-- HERO: the obverse -->
+  <section class="hero" id="top" aria-labelledby="hero-title">
+    <div class="wrap hero__grid">
+      <div class="hero__copy">
+        <p class="eyebrow hero__eyebrow" data-reveal>Strategic Advisory <span class="dot">·</span> Africa</p>
+        <h1 class="hero__title" id="hero-title">
+          <span class="line"><span>Shaping</span></span>
+          <span class="line"><span>Africa’s</span></span>
+          <span class="line"><span>Future.</span></span>
+        </h1>
+        <p class="hero__sub" data-reveal style="--delay: 500ms"><em>Connecting Global Opportunity.</em></p>
+        <p class="hero__lede" data-reveal style="--delay: 650ms">We work at the intersection of statecraft, international positioning and investment diplomacy.</p>
+        <div class="hero__actions" data-reveal style="--delay: 800ms">
+          <a class="btn btn--foil" href="#contact">Get in Touch</a>
+          <a class="link-arrow" href="#expertise">Our expertise<span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+      <div class="hero__medallion" aria-hidden="true">
+        <div class="medallion">
+          <div class="medallion__spin"><svg class="medallion__lines" viewBox="-500 -500 1000 1000" focusable="false" data-medallion></svg></div>
+          <svg class="medallion__ring" viewBox="-500 -500 1000 1000" focusable="false">
+            <defs><path id="ring-path" d="M 0 -476 A 476 476 0 1 1 0 476 A 476 476 0 1 1 0 -476"/></defs>
+            <text class="medallion__text"><textPath href="#ring-path" textLength="2975" lengthAdjust="spacing">SILVER FOX HORIZONS IS AN INTERNATIONAL STRATEGIC ADVISORY FIRM PARTNERING WITH GOVERNMENTS, INSTITUTIONS AND BUSINESSES TO STRENGTHEN STATE CAPACITY, ELEVATE GLOBAL INFLUENCE AND UNLOCK INVESTMENT OPPORTUNITIES ACROSS AFRICA ✦ </textPath></text>
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div class="wrap hero__foot" aria-hidden="true">
+      <span class="serial">Series MMXXVI <span class="sep">/</span> No. SFH 000 001</span>
+      <span class="hero__scroll"><span class="hero__scroll-line"></span>Scroll</span>
+      <span class="serial hero__foot-right">Statecraft <span class="sep">·</span> Positioning <span class="sep">·</span> Investment</span>
+    </div>
+  </section>
+
+  <div class="divider" aria-hidden="true">
+    <div class="micro micro--line"></div>
+    <div class="band" data-band data-h="56"></div>
+    <div class="micro micro--line micro--rev"></div>
+  </div>
+
+  <!-- MANDATE -->
+  <section class="mandate section" id="mandate" aria-labelledby="mandate-title">
+    <div class="wrap">
+      <div class="sec-label" data-reveal>
+        <span class="sec-label__no">01</span>
+        <h2 class="sec-label__name" id="mandate-title">The Mandate</h2>
+        <span class="sec-label__rule"></span>
+        <span class="sec-label__meta">SFH-MDT</span>
+      </div>
+      <div class="mandate__grid">
+        <div class="mandate__aside" data-reveal>
+          <span class="mandate__article">Article I</span>
+          <span class="mandate__rule" aria-hidden="true"></span>
+        </div>
+        <p class="mandate__text" data-reveal style="--delay: 120ms">Silver Fox Horizons is an international strategic advisory firm partnering with governments, institutions and businesses to <em>strengthen state capacity</em>, <em>elevate global influence</em> and <em>unlock investment opportunities</em> across Africa.</p>
+      </div>
+
+      <figure class="plate" data-reveal>
+        <div class="plate__frame">
+          <div class="micro plate__micro plate__micro--top" aria-hidden="true"></div>
+          <div class="plate__img">
+            <img src="assets/hero-golden-city.webp" width="1672" height="941" alt="An African capital at golden hour: a government building, towers and a river." loading="lazy" decoding="async">
+          </div>
+          <div class="micro plate__micro plate__micro--bottom" aria-hidden="true"></div>
+        </div>
+        <figcaption class="plate__cap">
+          <span class="serial">Plate I</span>
+          <span class="plate__cap-text">An African capital, golden hour</span>
+          <span class="serial plate__cap-right">SFH-PL-01</span>
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about section" id="about" aria-labelledby="about-title">
+    <div class="wrap">
+      <div class="sec-label" data-reveal>
+        <span class="sec-label__no">02</span>
+        <h2 class="sec-label__name" id="about-title">About</h2>
+        <span class="sec-label__rule"></span>
+        <span class="sec-label__meta">SFH-ABT</span>
+      </div>
+      <div class="about__grid">
+        <figure class="portrait" data-reveal>
+          <div class="portrait__stage">
+            <svg class="portrait__ring" viewBox="0 0 400 500" aria-hidden="true" focusable="false" data-oval></svg>
+            <div class="portrait__window">
+              <img src="assets/portrait.webp" width="1400" height="1496" alt="Portrait of a woman in a patterned head wrap and gold earrings, looking upward." loading="lazy" decoding="async">
+            </div>
+          </div>
+          <figcaption class="portrait__cap"><span class="serial">Portrait window</span><span class="serial">SFH-PT-02</span></figcaption>
+        </figure>
+        <div class="about__body">
+          <h3 class="about__title" data-reveal>We work alongside the people shaping Africa’s next chapter.</h3>
+          <p class="about__text" data-reveal style="--delay: 120ms">We bring policy, communications and commercial experience together, so that reform, reputation and investment move in the same direction.</p>
+          <div class="values" data-reveal style="--delay: 220ms">
+            <div class="seal" aria-hidden="true"><svg viewBox="-120 -120 240 240" focusable="false" data-seal="values"></svg></div>
+            <ul class="values__list" aria-label="Values">
+              <li><span class="values__no">I</span><span class="values__name">Trusted Advisor</span></li>
+              <li><span class="values__no">II</span><span class="values__name">Global Perspective</span></li>
+              <li><span class="values__no">III</span><span class="values__name">African Focus</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERTISE: three certificates -->
+  <section class="expertise section" id="expertise" aria-labelledby="expertise-title">
+    <div class="wrap">
+      <div class="sec-label" data-reveal>
+        <span class="sec-label__no">03</span>
+        <h2 class="sec-label__name" id="expertise-title">Expertise</h2>
+        <span class="sec-label__rule"></span>
+        <span class="sec-label__meta">Three instruments</span>
+      </div>
+      <div class="certs">
+        <article class="cert" data-reveal>
+          <svg class="cert__frame" aria-hidden="true" focusable="false" data-frame></svg>
+          <div class="cert__top"><span class="serial serial--gold">SFH-01-GOV</span><span class="serial">No. 01</span></div>
+          <div class="cert__img engrave">
+            <img src="assets/gen-parliament.webp" alt="Stone colonnade of a government building at golden hour, two figures on the steps." loading="lazy" decoding="async">
+          </div>
+          <h3 class="cert__title">Statecraft, Governance &amp; Institutional Transformation</h3>
+          <p class="cert__text">Helping governments strengthen institutional capacity, design and implement reforms, and improve public-sector performance.</p>
+          <div class="cert__foot"><span class="cert__tag">Governance</span><span class="micro micro--inline" aria-hidden="true"></span></div>
+        </article>
+        <article class="cert" data-reveal style="--delay: 120ms">
+          <svg class="cert__frame" aria-hidden="true" focusable="false" data-frame></svg>
+          <div class="cert__top"><span class="serial serial--gold">SFH-02-POS</span><span class="serial">No. 02</span></div>
+          <div class="cert__img engrave">
+            <img src="assets/gen-skyline-bluehour.webp" alt="An East African capital skyline at blue hour, hills behind." loading="lazy" decoding="async">
+          </div>
+          <h3 class="cert__title">Nation Branding, Strategic Communications &amp; Global Positioning</h3>
+          <p class="cert__text">Supporting governments in strengthening their international reputation, soft power and global visibility.</p>
+          <div class="cert__foot"><span class="cert__tag">Positioning</span><span class="micro micro--inline" aria-hidden="true"></span></div>
+        </article>
+        <article class="cert" data-reveal style="--delay: 240ms">
+          <svg class="cert__frame" aria-hidden="true" focusable="false" data-frame></svg>
+          <div class="cert__top"><span class="serial serial--gold">SFH-03-INV</span><span class="serial">No. 03</span></div>
+          <div class="cert__img engrave">
+            <img src="assets/gen-port.webp" alt="A container port at sunset, with cranes and a loaded ship." loading="lazy" decoding="async">
+          </div>
+          <h3 class="cert__title">Investment Diplomacy, Market Access &amp; Strategic Partnerships</h3>
+          <p class="cert__text">Helping international companies and investors navigate African markets, engage with governments and develop strategic investment and commercial partnerships.</p>
+          <div class="cert__foot"><span class="cert__tag">Investment</span><span class="micro micro--inline" aria-hidden="true"></span></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider" aria-hidden="true">
+    <div class="micro micro--line"></div>
+    <div class="band" data-band data-h="56"></div>
+    <div class="micro micro--line micro--rev"></div>
+  </div>
+
+  <!-- REACH -->
+  <section class="reach section" id="reach" aria-labelledby="reach-title">
+    <div class="wrap">
+      <div class="sec-label" data-reveal>
+        <span class="sec-label__no">04</span>
+        <h2 class="sec-label__name" id="reach-title">Reach</h2>
+        <span class="sec-label__rule"></span>
+        <span class="sec-label__meta">Demo figures</span>
+      </div>
+      <div class="reach__grid">
+        <figure class="map" data-reveal>
+          <svg class="map__svg" viewBox="0 0 850 740" role="img" aria-label="Map of Africa with 24 countries engaged and a demo selection of cities, illustrative only." data-map></svg>
+          <figcaption class="map__legend">
+            <span class="legend legend--hatch">Countries engaged, illustrative</span>
+            <span class="legend legend--dot">Cities, demo selection</span>
+          </figcaption>
+        </figure>
+        <div class="denoms">
+          <div class="denom" data-reveal>
+            <div class="denom__emblem" aria-hidden="true"><svg viewBox="-100 -100 200 200" focusable="false" data-mini="a"></svg><span class="denom__emblem-no">24</span></div>
+            <span class="denom__serial serial" aria-hidden="true">SFH-04-A</span>
+            <p class="denom__value">24</p>
+            <p class="denom__label">African countries engaged</p>
+          </div>
+          <div class="denom" data-reveal style="--delay: 100ms">
+            <div class="denom__emblem" aria-hidden="true"><svg viewBox="-100 -100 200 200" focusable="false" data-mini="b"></svg><span class="denom__emblem-no">6.8</span></div>
+            <span class="denom__serial serial" aria-hidden="true">SFH-04-B</span>
+            <p class="denom__value"><span class="denom__unit">$</span>6.8<span class="denom__unit denom__unit--after">B</span></p>
+            <p class="denom__label">Investment facilitated</p>
+          </div>
+          <div class="denom" data-reveal style="--delay: 200ms">
+            <div class="denom__emblem" aria-hidden="true"><svg viewBox="-100 -100 200 200" focusable="false" data-mini="c"></svg><span class="denom__emblem-no">60</span></div>
+            <span class="denom__serial serial" aria-hidden="true">SFH-04-C</span>
+            <p class="denom__value">60<span class="denom__unit denom__unit--after">+</span></p>
+            <p class="denom__label">Reform programmes supported</p>
+          </div>
+          <div class="denom" data-reveal style="--delay: 300ms">
+            <div class="denom__emblem" aria-hidden="true"><svg viewBox="-100 -100 200 200" focusable="false" data-mini="d"></svg><span class="denom__emblem-no">15</span></div>
+            <span class="denom__serial serial" aria-hidden="true">SFH-04-D</span>
+            <p class="denom__value">15</p>
+            <p class="denom__label">Years at the centre of government</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- APPROACH: issuance sequence -->
+  <section class="approach section" id="approach" aria-labelledby="approach-title">
+    <div class="wrap">
+      <div class="sec-label" data-reveal>
+        <span class="sec-label__no">05</span>
+        <h2 class="sec-label__name" id="approach-title">Approach</h2>
+        <span class="sec-label__rule"></span>
+        <span class="sec-label__meta">Issuance sequence</span>
+      </div>
+      <ol class="steps" data-steps>
+        <li class="step" data-reveal>
+          <div class="step__seal" aria-hidden="true"><svg viewBox="-100 -100 200 200" focusable="false" data-stage="1"></svg></div>
+          <span class="serial serial--gold">SFH-AP-01 <span class="sep">/</span> Stage I</span>
+          <h3 class="step__title">Understand</h3>
+          <p class="step__text">We start with the context: the institutions, the people and what has already been tried.</p>
+        </li>
+        <li class="step" data-reveal style="--delay: 120ms">
+          <div class="step__seal" aria-hidden="true"><svg viewBox="-100 -100 200 200" focusable="false" data-stage="2"></svg></div>
+          <span class="serial serial--gold">SFH-AP-02 <span class="sep">/</span> Stage II</span>
+          <h3 class="step__title">Strategise</h3>
+          <p class="step__text">We agree clear priorities and a realistic plan to reach them.</p>
+        </li>
+        <li class="step" data-reveal style="--delay: 240ms">
+          <div class="step__seal" aria-hidden="true"><svg viewBox="-100 -100 200 200" focusable="false" data-stage="3"></svg></div>
+          <span class="serial serial--gold">SFH-AP-03 <span class="sep">/</span> Stage III</span>
+          <h3 class="step__title">Partner</h3>
+          <p class="step__text">We work alongside your teams and bring in the right partners.</p>
+        </li>
+        <li class="step" data-reveal style="--delay: 360ms">
+          <div class="step__seal" aria-hidden="true"><svg viewBox="-100 -100 200 200" focusable="false" data-stage="4"></svg></div>
+          <span class="serial serial--gold">SFH-AP-04 <span class="sep">/</span> Stage IV</span>
+          <h3 class="step__title">Deliver</h3>
+          <p class="step__text">We stay through implementation and measure what changes.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- INSIGHTS: dated notices -->
+  <section class="insights section" id="insights" aria-labelledby="insights-title">
+    <div class="wrap">
+      <div class="sec-label sec-label--stamp" data-reveal>
+        <span class="sec-label__no">06</span>
+        <h2 class="sec-label__name" id="insights-title">Insights</h2>
+        <span class="sec-label__rule"></span>
+        <span class="specimen"><span class="specimen__big">Specimen</span><span class="specimen__small">Sample articles</span></span>
+      </div>
+      <ol class="notices">
+        <li class="notice" data-reveal>
+          <a class="notice__link" href="#">
+            <time class="notice__date" datetime="2026-11-12"><span class="notice__day">12</span><span class="notice__month">November 2026</span></time>
+            <span class="notice__cat">Governance</span>
+            <span class="notice__body">
+              <span class="notice__title">Building Delivery Units That Outlast an Election Cycle</span>
+              <span class="notice__dek">What keeps a central delivery unit effective when leadership changes.</span>
+            </span>
+            <span class="notice__ref"><span class="serial">SFH-N-03</span><span class="notice__arrow" aria-hidden="true">→</span></span>
+          </a>
+        </li>
+        <li class="notice" data-reveal style="--delay: 100ms">
+          <a class="notice__link" href="#">
+            <time class="notice__date" datetime="2026-10-28"><span class="notice__day">28</span><span class="notice__month">October 2026</span></time>
+            <span class="notice__cat">Investment</span>
+            <span class="notice__body">
+              <span class="notice__title">Engaging African Governments as an Investor</span>
+              <span class="notice__dek">Practical lessons for companies entering markets where the state is a key partner.</span>
+            </span>
+            <span class="notice__ref"><span class="serial">SFH-N-02</span><span class="notice__arrow" aria-hidden="true">→</span></span>
+          </a>
+        </li>
+        <li class="notice" data-reveal style="--delay: 200ms">
+          <a class="notice__link" href="#">
+            <time class="notice__date" datetime="2026-10-09"><span class="notice__day">09</span><span class="notice__month">October 2026</span></time>
+            <span class="notice__cat">Nation Branding</span>
+            <span class="notice__body">
+              <span class="notice__title">Reputation as a National Asset</span>
+              <span class="notice__dek">Why a country’s global image is built by its institutions, not its slogans.</span>
+            </span>
+            <span class="notice__ref"><span class="serial">SFH-N-01</span><span class="notice__arrow" aria-hidden="true">→</span></span>
+          </a>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- CONTACT: sealed document -->
+  <section class="contact section" id="contact" aria-labelledby="contact-title">
+    <div class="wrap">
+      <div class="dossier" data-reveal>
+        <svg class="dossier__frame" aria-hidden="true" focusable="false" data-frame data-frame-size="lg"></svg>
+        <div class="dossier__head">
+          <span class="serial serial--gold">Ref. SFH-CT-07</span>
+          <span class="serial">For the attention of Silver Fox Horizons</span>
+        </div>
+        <h2 class="dossier__title" id="contact-title">Let’s Build What’s Next.</h2>
+        <p class="dossier__text">Tell us what you are working on. We will tell you honestly how we can help.</p>
+        <a class="btn btn--foil btn--lg" href="#">Contact Us</a>
+        <div class="dossier__seal" aria-hidden="true"><svg viewBox="-120 -120 240 240" focusable="false" data-seal="contact"></svg></div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="divider divider--footer" aria-hidden="true">
+    <div class="micro micro--line"></div>
+    <div class="band" data-band data-h="44"></div>
+  </div>
+  <div class="wrap footer__grid">
+    <div class="footer__brand">
+      <p class="footer__wordmark">Silver Fox Horizons</p>
+      <p class="footer__tag">Strategic Advisory <span class="dot">·</span> Global Perspective <span class="dot">·</span> African Focus</p>
+    </div>
+    <nav class="footer__nav" aria-label="Footer">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#expertise">Expertise</a></li>
+        <li><a href="#insights">Insights</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <a class="footer__social" href="#" aria-label="Silver Fox Horizons on LinkedIn">
+      <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path fill="currentColor" d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9.75h4v11H3v-11Zm6.5 0h3.83v1.5h.06c.53-1 1.84-2.05 3.79-2.05 4.05 0 4.82 2.66 4.82 6.13v5.42h-4v-4.8c0-1.15-.02-2.62-1.6-2.62-1.6 0-1.84 1.25-1.84 2.54v4.88h-4v-11Z"/></svg>
+    </a>
+  </div>
+  <div class="wrap footer__base">
+    <span>© 2026 Silver Fox Horizons</span>
+    <span>Design concept. Figures and articles are placeholders.</span>
+  </div>
+</footer>
+
+<script src="main.js" defer></script>
+</body>
+</html>

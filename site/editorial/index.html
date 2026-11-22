@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Silver Fox Horizons</title>
+  <meta name="description" content="Silver Fox Horizons is an international strategic advisory firm partnering with governments, institutions and businesses to strengthen state capacity, elevate global influence and unlock investment opportunities across Africa.">
+  <meta name="theme-color" content="#0A0A0A">
+  <link rel="icon" href="data:,">
+  <script>
+    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) document.documentElement.classList.add('js-motion');
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gilda+Display&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" data-header>
+    <div class="header-inner">
+      <a class="logo" href="#top" aria-label="Silver Fox Horizons, back to top">Silver Fox<br>Horizons</a>
+      <nav class="nav" aria-label="Primary">
+        <ul>
+          <li><a href="#top" aria-current="page">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#expertise">Expertise</a></li>
+          <li><a href="#insights">Insights</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <a class="pill header-cta" href="#contact">Get in Touch <span class="arrow" aria-hidden="true">→</span></a>
+      <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu" data-menu-btn>
+        <span data-menu-label>Menu</span>
+        <span class="menu-lines" aria-hidden="true"><span></span><span></span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="menu" id="menu" data-menu hidden>
+    <nav aria-label="Mobile">
+      <ul>
+        <li><a href="#top" data-menu-link>Home</a></li>
+        <li><a href="#about" data-menu-link>About</a></li>
+        <li><a href="#expertise" data-menu-link>Expertise</a></li>
+        <li><a href="#insights" data-menu-link>Insights</a></li>
+        <li><a href="#contact" data-menu-link>Contact</a></li>
+      </ul>
+      <a class="pill" href="#contact" data-menu-link>Get in Touch <span class="arrow" aria-hidden="true">→</span></a>
+    </nav>
+  </div>
+
+  <main id="main">
+    <!-- HERO: night flight over the city, scrubbed by scroll on desktop -->
+    <section class="hero" id="top" aria-label="Introduction" data-hero>
+      <div class="hero-media" aria-hidden="true">
+        <canvas class="hero-canvas" data-hero-canvas></canvas>
+        <video class="hero-video" data-hero-video muted loop playsinline preload="none" poster="../../assets/hero-night-poster.webp"
+               data-portrait-poster="../../assets/hero-night-portrait-poster.webp">
+          <source data-src="../../assets/hero-night.mp4" data-src-portrait="../../assets/hero-night-portrait.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="hero-shade" aria-hidden="true"></div>
+
+      <div class="hero-content" data-hero-content>
+        <div class="hero-meta">
+          <span data-hero-fade>Strategic Advisory</span>
+          <span data-hero-fade>Global Perspective</span>
+          <span data-hero-fade>African Focus</span>
+          <span class="counter" aria-hidden="true" data-hero-fade>
+            <span class="counter-now">01</span><span class="counter-sep">/</span><span class="counter-all">05</span>
+            <span class="counter-track"><span class="counter-fill" data-counter-fill></span></span>
+          </span>
+          <span class="hero-meta-rule" aria-hidden="true" data-hero-rule></span>
+        </div>
+        <h1 class="hero-title"><span class="line" data-hero-line>Shaping Africa’s Future.</span></h1>
+        <div class="hero-row">
+          <p class="hero-sub" data-hero-line>Connecting Global Opportunity.</p>
+          <div class="hero-side" data-hero-fade>
+            <p class="hero-text">Silver Fox Horizons is an international strategic advisory firm partnering with governments, institutions and businesses to strengthen state capacity, elevate global influence and unlock investment opportunities across Africa.</p>
+            <a class="text-link" href="#expertise">Explore our expertise <span class="arrow" aria-hidden="true">→</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Placeholder: the next section gets built after the hero is approved -->
+    <section class="next-up" id="about" aria-label="Next section placeholder">
+      <p>Next: About section, built after the hero is approved.</p>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js" defer></script>
+  <script src="main.js" defer></script>
+</body>
+</html>

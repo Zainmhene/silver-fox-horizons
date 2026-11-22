@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hero font options</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=zodiak@300,400,401&f[]=satoshi@400,500&f[]=boska@300,400,401&f[]=general-sans@400,500&f[]=gambarino@400&f[]=switzer@400,500&display=swap">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:ital,wght@0,300;0,400;1,300;1,400&family=Manrope:wght@400;500&family=Gilda+Display&family=Hanken+Grotesk:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root { --gold: #C9A55C; --ivory: #F3EEE6; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: #000; color: var(--ivory); }
+    .opt {
+      position: relative; min-height: 100vh; display: flex; flex-direction: column; justify-content: center;
+      padding: 7rem clamp(1.25rem, 5vw, 5.5rem) 5rem; overflow: hidden;
+      background: #000 url("../assets/hero-night-poster.webp") center / cover no-repeat;
+      border-bottom: 1px solid rgba(243,238,230,.2);
+    }
+    .opt::before {
+      content: ""; position: absolute; inset: 0;
+      background:
+        linear-gradient(90deg, rgba(0,0,0,.82) 0%, rgba(0,0,0,.6) 30%, rgba(0,0,0,0) 60%),
+        linear-gradient(180deg, rgba(0,0,0,.8) 0%, rgba(0,0,0,0) 24%);
+    }
+    .opt > * { position: relative; }
+    .tag {
+      position: absolute; top: 1.75rem; right: clamp(1.25rem, 5vw, 5.5rem);
+      font: 500 12px/1 system-ui, sans-serif; letter-spacing: .16em; text-transform: uppercase;
+      color: #000; background: var(--gold); padding: .5rem .75rem;
+    }
+    .logo { position: absolute; top: 1.75rem; left: clamp(1.25rem, 5vw, 5.5rem); font-size: 1.375rem; line-height: .95; }
+    .copy { max-width: 46rem; padding-left: clamp(1.25rem, 2.2vw, 2rem); border-left: 1px solid var(--gold); }
+    h1 { margin: 0 0 1.75rem; font-weight: 400; font-size: clamp(3rem, 5.5vw, 5.75rem); line-height: .98; letter-spacing: -.015em; }
+    h1 span { display: block; }
+    h1 .g { font-style: italic; color: var(--gold); }
+    p { max-width: 33rem; margin: 0 0 2.25rem; font-size: 1.0625rem; line-height: 1.7; color: rgba(243,238,230,.84); }
+    .pill { display: inline-flex; align-items: center; gap: .75rem; min-height: 52px; padding: 0 1.75rem; border: 1px solid rgba(201,165,92,.6); border-radius: 999px; font-size: .875rem; font-weight: 500; }
+
+    .o1 .logo, .o1 h1 { font-family: "Zodiak", serif; } .o1 h1 { font-weight: 300; } .o1 p, .o1 .pill { font-family: "Satoshi", sans-serif; }
+    .o2 .logo, .o2 h1 { font-family: "Boska", serif; } .o2 h1 { font-weight: 300; font-size: clamp(3.2rem, 6vw, 6.25rem); } .o2 p, .o2 .pill { font-family: "General Sans", sans-serif; }
+    .o3 .logo, .o3 h1 { font-family: "Gambarino", serif; } .o3 p, .o3 .pill { font-family: "Switzer", sans-serif; }
+    .o4 .logo, .o4 h1 { font-family: "Noto Serif Display", serif; } .o4 h1 { font-weight: 300; } .o4 p, .o4 .pill { font-family: "Manrope", sans-serif; }
+    .o5 .logo, .o5 h1 { font-family: "Gilda Display", serif; } .o5 h1 { letter-spacing: -.005em; } .o5 p, .o5 .pill { font-family: "Hanken Grotesk", sans-serif; }
+    .o0 .logo, .o0 h1 { font-family: "Instrument Serif", serif; }
+  </style>
+</head>
+<body>
+  <section class="opt o1" id="o1">
+    <span class="tag">1 · Zodiak + Satoshi</span>
+    <div class="logo">Silver Fox<br>Horizons</div>
+    <div class="copy">
+      <h1><span>Shaping Africa’s Future.</span><span class="g">Connecting Global Opportunity.</span></h1>
+      <p>Silver Fox Horizons is an international strategic advisory firm partnering with governments, institutions and businesses to strengthen state capacity, elevate global influence and unlock investment opportunities across Africa.</p>
+      <span class="pill">Explore Our Expertise →</span>
+    </div>
+  </section>
+  <section class="opt o2" id="o2">
+    <span class="tag">2 · Boska + General Sans</span>
+    <div class="logo">Silver Fox<br>Horizons</div>
+    <div class="copy">
+      <h1><span>Shaping Africa’s Future.</span><span class="g">Connecting Global Opportunity.</span></h1>
+      <p>Silver Fox Horizons is an international strategic advisory firm partnering with governments, institutions and businesses to strengthen state capacity, elevate global influence and unlock investment opportunities across Africa.</p>
+      <span class="pill">Explore Our Expertise →</span>
+    </div>
+  </section>
+  <section class="opt o3" id="o3">
+    <span class="tag">3 · Gambarino + Switzer</span>
+    <div class="logo">Silver Fox<br>Horizons</div>
+    <div class="copy">
+      <h1><span>Shaping Africa’s Future.</span><span class="g">Connecting Global Opportunity.</span></h1>
+      <p>Silver Fox Horizons is an international strategic advisory firm partnering with governments, institutions and businesses to strengthen state capacity, elevate global influence and unlock investment opportunities across Africa.</p>
+      <span class="pill">Explore Our Expertise →</span>
+    </div>
+  </section>
+  <section class="opt o4" id="o4">
+    <span class="tag">4 · Noto Serif Display + Manrope</span>
+    <div class="logo">Silver Fox<br>Horizons</div>
+    <div class="copy">
+      <h1><span>Shaping Africa’s Future.</span><span class="g">Connecting Global Opportunity.</span></h1>
+      <p>Silver Fox Horizons is an international strategic advisory firm partnering with governments, institutions and businesses to strengthen state capacity, elevate global influence and unlock investment opportunities across Africa.</p>
+      <span class="pill">Explore Our Expertise →</span>
+    </div>
+  </section>
+  <section class="opt o5" id="o5">
+    <span class="tag">5 · Gilda Display + Hanken Grotesk</span>
+    <div class="logo">Silver Fox<br>Horizons</div>
+    <div class="copy">
+      <h1><span>Shaping Africa’s Future.</span><span class="g">Connecting Global Opportunity.</span></h1>
+      <p>Silver Fox Horizons is an international strategic advisory firm partnering with governments, institutions and businesses to strengthen state capacity, elevate global influence and unlock investment opportunities across Africa.</p>
+      <span class="pill">Explore Our Expertise →</span>
+    </div>
+  </section>
+</body>
+</html>

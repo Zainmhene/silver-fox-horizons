@@ -1,0 +1,131 @@
+<title>Silver Fox Horizons Directions</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  /* Layout: one long column of direction "plates", phone-first, each plate = name, idea, screens */
+  :root {
+    --bg: #0b0b0c;
+    --panel: #141416;
+    --fg: #f1ede6;
+    --muted: #a9a49b;
+    --line: #2a2826;
+    --gold: #c9a55c;
+    --display: "Instrument Serif", "Times New Roman", serif;
+    --body: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+    color-scheme: dark;
+  }
+  body {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: var(--body);
+    font-size: 16px;
+    line-height: 1.6;
+    padding-left: max(16px, env(safe-area-inset-left, 0px));
+    padding-right: max(16px, env(safe-area-inset-right, 0px));
+    padding-block: 0 4rem;
+  }
+  .wrap { max-width: 1120px; margin: 0 auto; }
+  header.top { padding-block: 3.5rem 2.5rem; border-bottom: 1px solid var(--line); }
+  .eyebrow {
+    font-size: .75rem; letter-spacing: .22em; text-transform: uppercase; color: var(--gold);
+    display: flex; align-items: center; gap: .75rem; margin: 0 0 1rem;
+  }
+  .eyebrow::before { content: ""; width: 2rem; height: 1px; background: var(--gold); }
+  h1 {
+    font-family: var(--display); font-weight: 400; font-size: clamp(2.6rem, 8vw, 5rem);
+    line-height: .98; margin: 0 0 1.25rem; text-wrap: balance;
+  }
+  h1 em { color: var(--gold); }
+  .intro { color: var(--muted); max-width: 40rem; margin: 0; }
+  .plate { padding-block: 3rem; border-bottom: 1px solid var(--line); display: grid; gap: 1.25rem; }
+  .plate-head { display: grid; gap: .5rem; }
+  .num { font-family: var(--display); font-size: 1.25rem; color: var(--gold); font-variant-numeric: lining-nums; }
+  h2 { font-family: var(--display); font-weight: 400; font-size: clamp(2rem, 6vw, 3.25rem); line-height: 1; margin: 0; }
+  .pick {
+    display: inline-block; margin-left: .5rem; vertical-align: middle;
+    font-family: var(--body); font-size: .7rem; letter-spacing: .18em; text-transform: uppercase;
+    color: var(--bg); background: var(--gold); padding: .3rem .55rem;
+  }
+  .idea { margin: 0; max-width: 44rem; }
+  .why { margin: 0; color: var(--muted); max-width: 44rem; font-size: .95rem; }
+  .shots { display: grid; gap: 1rem; grid-template-columns: minmax(0, 3fr) minmax(0, 1fr); align-items: start; }
+  .shot { margin: 0; display: grid; gap: .4rem; min-width: 0; text-decoration: none; }
+  .shot img { width: 100%; max-width: 100%; height: auto; display: block; border: 1px solid var(--line); background: var(--panel); }
+  .shot .cap { font-size: .75rem; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+  .shot:hover .cap, .shot:focus-visible .cap { color: var(--gold); }
+  .links { display: flex; flex-wrap: wrap; gap: .75rem; }
+  .btn {
+    display: inline-flex; align-items: center; gap: .6rem; min-height: 44px; padding: 0 1.1rem;
+    border: 1px solid var(--line); color: var(--fg); text-decoration: none;
+    font-size: .8rem; letter-spacing: .14em; text-transform: uppercase;
+  }
+  .btn:hover, .btn:focus-visible { border-color: var(--gold); color: var(--gold); }
+  .btn.primary { border-color: var(--gold); color: var(--gold); }
+  :focus-visible { outline: 1px solid var(--gold); outline-offset: 3px; }
+  footer { padding-top: 2.5rem; color: var(--muted); font-size: .85rem; }
+  @media (max-width: 640px) {
+    .shots { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+    .shots .shot:first-child { grid-column: 1 / -1; }
+  }
+</style>
+
+<div class="wrap">
+  <header class="top">
+    <p class="eyebrow">Homepage directions · Draft for Moudy</p>
+    <h1>Six ways to say <em>Silver Fox Horizons.</em></h1>
+    <p class="intro" id="intro">Six complete homepage directions for the client, each built from the same copy, figures and media. My pick comes first. Figures and articles are demo placeholders. Tap any screenshot to see the whole page.</p>
+  </header>
+
+  <main id="plates"></main>
+
+  <footer>Built from the client's mandate and three areas of expertise. Images: generated for the mockup plus licensed stock and NASA imagery. Not for public release.</footer>
+</div>
+
+<script>
+  // Filled in after review: name, idea, why, live URL (optional)
+  const directions = [
+    { n: "04", slug: "04-horizon", name: "Horizon", pick: true, live: "https://claude.ai/artifact/5VzFhVWERz2EWoHB7G2dKM",
+      idea: "The name is the idea. One silver line runs across the whole site at the same height. Every photo is cropped so its own horizon sits on that line, and opens out of it like a film frame. The name set in Bodoni like a magazine cover, silver instead of gold, chapters numbered I to VIII.",
+      why: "My pick: it is the only concept no other firm could use, because it comes from her name. Quiet, cinematic, unmistakably premium." },
+    { n: "01", slug: "01-golden-hour", name: "Golden Hour", live: "https://claude.ai/artifact/NpaEaNU3eE8FhEBM1fYTei",
+      idea: "The ChatGPT mock you liked, built properly. Glowing golden-hour photos framed in true black, gold hairlines, numbered panels, and Africa in gold dots with night falling across it from east to west.",
+      why: "The safest choice: closest to what you and she have already seen and liked." },
+    { n: "02", slug: "02-continent", name: "Continent", live: "https://claude.ai/artifact/Sx7ng25a15xtHJomnqZT1z",
+      idea: "Africa, drawn in about 6,000 gold dots from real map data, is the spine of the site. Each area of expertise changes the map: capitals, arcs to London, New York and Dubai, investment corridors, with real distances and live local times.",
+      why: "The strongest for investors: it shows reach across Africa instead of just claiming it." },
+    { n: "03", slug: "03-monolith", name: "Monolith", live: "https://claude.ai/artifact/SkXcDFgDtyW38T9hxJDN2i",
+      idea: "New York in black and white. Giant type, hard cuts between black and white sections, black-and-white photography, the city playing inside the letters of AFRICA. Gold only as a small square full stop.",
+      why: "The most confident and most New York. Bold for a government audience." },
+    { n: "05", slug: "05-sovereign", name: "Sovereign", live: "https://claude.ai/artifact/PqA7HU4VhBj9a27xkJREPD",
+      idea: "The language of things states issue: banknotes, passports, treaties. A gold guilloche medallion draws itself, the three services are certificates with serial numbers, the figures read like denominations.",
+      why: "The most original. Speaks directly to statecraft and capital, but needs a confident client." },
+    { n: "06", slug: "06-embassy", name: "Embassy", live: "https://claude.ai/artifact/WrqrJA3gnc1ifcrnUmMKcT",
+      idea: "The light one. Ivory paper, black ink, double rules, the services as Articles I to III, photographs framed like museum prints, the approach written as terms of engagement signed by both parties.",
+      why: "Closest in spirit to the Tony Blair Institute site she named, but more refined. Calm authority." }
+  ];
+  const plates = document.getElementById('plates');
+  directions.forEach((d) => {
+    const s = document.createElement('section');
+    s.className = 'plate';
+    s.id = 'd' + d.n;
+    s.innerHTML = `
+      <div class="plate-head">
+        <span class="num">${d.n}</span>
+        <h2>${d.name}${d.pick ? '<span class="pick">My pick</span>' : ''}</h2>
+      </div>
+      <p class="idea">${d.idea}</p>
+      <p class="why">${d.why}</p>
+      <div class="shots">
+        <a class="shot" href="shots/${d.slug}-full.jpg" target="_blank" rel="noopener"><img src="shots/${d.slug}-desktop.jpg" alt="${d.name} homepage, desktop first screen" loading="lazy"><span class="cap">Desktop · tap for full page</span></a>
+        <a class="shot" href="shots/${d.slug}-phone-full.jpg" target="_blank" rel="noopener"><img src="shots/${d.slug}-phone.jpg" alt="${d.name} homepage on a phone" loading="lazy"><span class="cap">Phone · tap for full page</span></a>
+      </div>
+      <div class="links">
+        <a class="btn" href="shots/${d.slug}-full.jpg" target="_blank" rel="noopener">Full page (desktop)</a>
+        <a class="btn" href="shots/${d.slug}-phone-full.jpg" target="_blank" rel="noopener">Full page (phone)</a>
+        ${d.live ? `<a class="btn primary" href="${d.live}" target="_blank" rel="noopener">Open live site</a>` : ''}
+      </div>`;
+    plates.appendChild(s);
+  });
+</script>

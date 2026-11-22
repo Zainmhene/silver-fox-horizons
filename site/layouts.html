@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hero layout options</title>
+  <link rel="icon" href="data:,">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gilda+Display&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root { --ivory: #F3EEE6; --ivory-80: rgba(243,238,230,.82); --ivory-60: rgba(243,238,230,.6); --gold: #E3CBA0; --line: rgba(243,238,230,.16); --gutter: clamp(1.25rem, 5vw, 5.5rem); }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: #000; color: var(--ivory); font-family: "Hanken Grotesk", system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+    .serif { font-family: "Gilda Display", Georgia, serif; font-weight: 400; }
+    p { margin: 0; }
+    .opt { position: relative; height: 100vh; min-height: 640px; overflow: hidden; isolation: isolate; border-bottom: 1px solid #333; }
+    .city { position: absolute; inset: 0; z-index: -2; background: url("../assets/hero-night-poster.webp") center / cover no-repeat; }
+    .tag { position: absolute; z-index: 9; bottom: 1.5rem; right: var(--gutter); font: 600 11px/1 system-ui, sans-serif; letter-spacing: .16em; text-transform: uppercase; color: #000; background: #fff; padding: .5rem .7rem; }
+    .head { position: absolute; z-index: 5; top: 0; left: 0; right: 0; height: 88px; display: flex; align-items: center; justify-content: space-between; padding: 0 var(--gutter); }
+    .logo { font-size: 1.375rem; line-height: .98; }
+    .head nav { display: flex; align-items: center; gap: 2.25rem; font-size: .875rem; color: var(--ivory-80); }
+    .head .cta { padding: .8rem 1.2rem; border: 1px solid rgba(243,238,230,.35); color: var(--ivory); font-weight: 500; font-size: .8125rem; }
+    .kicker { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.75rem; font-size: .75rem; font-weight: 500; letter-spacing: .28em; text-transform: uppercase; color: var(--gold); }
+    .kicker::before { content: ""; width: 2.5rem; height: 1px; background: var(--gold); }
+    h1 { margin: 0 0 1.75rem; font-size: clamp(3rem, 5.2vw, 5.5rem); line-height: 1.03; letter-spacing: -.015em; }
+    h1 span { display: block; }
+    h1 .acc { color: var(--gold); }
+    .txt { max-width: 33rem; margin-bottom: 2.25rem; font-size: 1.0625rem; line-height: 1.75; color: var(--ivory-80); }
+    .actions { display: flex; align-items: center; gap: 2rem; }
+    .btn { display: inline-flex; align-items: center; min-height: 54px; padding: 0 1.9rem; background: var(--gold); color: #12100c; font-weight: 500; font-size: .875rem; letter-spacing: .03em; }
+    .link { font-weight: 500; font-size: .9375rem; padding-bottom: .35rem; border-bottom: 1px solid var(--gold); }
+
+    /* 1. Classic */
+    .l1 .shade { position: absolute; inset: 0; z-index: -1; background: linear-gradient(90deg, rgba(0,0,0,.86), rgba(0,0,0,.62) 34%, rgba(0,0,0,0) 64%), linear-gradient(180deg, rgba(0,0,0,.8), rgba(0,0,0,0) 22%); }
+    .l1 .body { height: 100%; display: flex; align-items: center; padding: 88px var(--gutter) 4rem; }
+    .l1 .copy { max-width: 46rem; padding-left: 2rem; border-left: 1px solid var(--gold); }
+
+    /* 2. Split */
+    .l2 .city { left: 42%; }
+    .l2 .city::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, #050505 0%, rgba(5,5,5,0) 18%); }
+    .l2 .panel { position: absolute; inset: 0 58% 0 0; background: #050505; }
+    .l2 .body { position: relative; height: 100%; width: 42%; display: flex; flex-direction: column; justify-content: center; padding: 88px 3.5rem 4rem var(--gutter); }
+    .l2 h1 { font-size: clamp(2.8rem, 4.4vw, 4.75rem); }
+    .l2 .stats { display: flex; gap: 2.5rem; margin-top: 3.5rem; padding-top: 1.5rem; border-top: 1px solid var(--line); }
+    .l2 .stats b { display: block; font-family: "Gilda Display", serif; font-weight: 400; font-size: 2rem; color: var(--ivory); }
+    .l2 .stats span { font-size: .75rem; letter-spacing: .14em; text-transform: uppercase; color: var(--ivory-60); }
+    .l2 .cap { position: absolute; right: var(--gutter); top: 110px; font-size: .75rem; letter-spacing: .2em; text-transform: uppercase; color: var(--ivory-80); }
+
+    /* 3. Framed */
+    .l3 { background: #070707; }
+    .l3 .frame { position: absolute; top: 104px; right: var(--gutter); bottom: 3.5rem; left: 34%; overflow: hidden; outline: 1px solid rgba(227,203,160,.35); outline-offset: 10px; }
+    .l3 .frame .city { position: absolute; inset: 0; z-index: 0; }
+    .l3 .frame::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(0,0,0,.55), rgba(0,0,0,0) 40%); }
+    .l3 .body { position: relative; z-index: 3; height: 100%; display: flex; align-items: center; padding: 88px var(--gutter) 4rem; }
+    .l3 .copy { max-width: 48rem; }
+    .l3 h1 { font-size: clamp(3.2rem, 6vw, 6.25rem); text-shadow: 0 2px 30px rgba(0,0,0,.6); }
+    .l3 .txt { max-width: 28rem; }
+    .l3 .cap { position: absolute; z-index: 3; right: calc(var(--gutter) + 1.25rem); bottom: 4.75rem; font-size: .75rem; letter-spacing: .2em; text-transform: uppercase; color: var(--ivory-80); }
+
+    /* 4. Index */
+    .l4 .shade { position: absolute; inset: 0; z-index: -1; background: linear-gradient(90deg, rgba(0,0,0,.85), rgba(0,0,0,.55) 40%, rgba(0,0,0,.35) 70%, rgba(0,0,0,.7)), linear-gradient(180deg, rgba(0,0,0,.8), rgba(0,0,0,0) 22%); }
+    .l4 .body { height: 100%; display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, .8fr); gap: 4rem; align-items: center; padding: 88px var(--gutter) 4rem; }
+    .l4 .index { list-style: none; margin: 0; padding: 0; border-top: 1px solid rgba(243,238,230,.3); }
+    .l4 .index li { display: grid; grid-template-columns: 2.5rem 1fr auto; gap: 1rem; align-items: baseline; padding: 1.35rem 0; border-bottom: 1px solid rgba(243,238,230,.3); }
+    .l4 .index .n { font-size: .75rem; letter-spacing: .14em; color: var(--gold); }
+    .l4 .index .t { font-family: "Gilda Display", serif; font-size: 1.35rem; line-height: 1.2; }
+    .l4 .index .a { color: var(--gold); }
+    .l4 .index-label { margin-bottom: 1rem; font-size: .75rem; letter-spacing: .24em; text-transform: uppercase; color: var(--ivory-60); }
+  </style>
+</head>
+<body>
+
+<section class="opt l1" id="l1">
+  <div class="city"></div><div class="shade"></div>
+  <header class="head"><div class="logo serif">Silver Fox<br>Horizons</div><nav><span>About</span><span>Expertise</span><span>Insights</span><span>Contact</span><span class="cta">Get in Touch →</span></nav></header>
+  <div class="body"><div class="copy">
+    <p class="kicker">International Strategic Advisory</p>
+    <h1 class="serif"><span>Shaping Africa’s Future.</span><span class="acc">Connecting Global Opportunity.</span></h1>
+    <p class="txt">Silver Fox Horizons is an international strategic advisory firm partnering with governments, institutions and businesses to strengthen state capacity, elevate global influence and unlock investment opportunities across Africa.</p>
+    <div class="actions"><span class="btn">Explore Our Expertise</span><span class="link">Get in touch →</span></div>
+  </div></div>
+  <span class="tag">1 · Classic</span>
+</section>
+
+<section class="opt l2" id="l2">
+  <div class="panel"></div><div class="city"></div>
+  <header class="head"><div class="logo serif">Silver Fox<br>Horizons</div><nav><span>About</span><span>Expertise</span><span>Insights</span><span>Contact</span><span class="cta">Get in Touch →</span></nav></header>
+  <div class="body">
+    <p class="kicker">International Strategic Advisory</p>
+    <h1 class="serif"><span>Shaping Africa’s Future.</span><span class="acc">Connecting Global Opportunity.</span></h1>
+    <p class="txt">Silver Fox Horizons is an international strategic advisory firm partnering with governments, institutions and businesses to strengthen state capacity, elevate global influence and unlock investment opportunities across Africa.</p>
+    <div class="actions"><span class="btn">Explore Our Expertise</span><span class="link">Get in touch →</span></div>
+    <div class="stats"><div><b>24</b><span>Countries</span></div><div><b>$6.8B</b><span>Facilitated</span></div><div><b>15</b><span>Years</span></div></div>
+  </div>
+  <p class="cap">Africa by night</p>
+  <span class="tag">2 · Split</span>
+</section>
+
+<section class="opt l3" id="l3">
+  <div class="frame"><div class="city"></div></div>
+  <header class="head"><div class="logo serif">Silver Fox<br>Horizons</div><nav><span>About</span><span>Expertise</span><span>Insights</span><span>Contact</span><span class="cta">Get in Touch →</span></nav></header>
+  <div class="body"><div class="copy">
+    <p class="kicker">International Strategic Advisory</p>
+    <h1 class="serif"><span>Shaping Africa’s Future.</span><span class="acc">Connecting Global Opportunity.</span></h1>
+    <p class="txt">Silver Fox Horizons is an international strategic advisory firm partnering with governments, institutions and businesses to strengthen state capacity, elevate global influence and unlock investment opportunities across Africa.</p>
+    <div class="actions"><span class="btn">Explore Our Expertise</span><span class="link">Get in touch →</span></div>
+  </div></div>
+  <p class="cap">Plate 01 · A city at night</p>
+  <span class="tag">3 · Framed</span>
+</section>
+
+<section class="opt l4" id="l4">
+  <div class="city"></div><div class="shade"></div>
+  <header class="head"><div class="logo serif">Silver Fox<br>Horizons</div><nav><span>About</span><span>Expertise</span><span>Insights</span><span>Contact</span><span class="cta">Get in Touch →</span></nav></header>
+  <div class="body">
+    <div class="copy">
+      <p class="kicker">International Strategic Advisory</p>
+      <h1 class="serif"><span>Shaping Africa’s Future.</span><span class="acc">Connecting Global Opportunity.</span></h1>
+      <p class="txt">Silver Fox Horizons is an international strategic advisory firm partnering with governments, institutions and businesses to strengthen state capacity, elevate global influence and unlock investment opportunities across Africa.</p>
+      <div class="actions"><span class="btn">Explore Our Expertise</span><span class="link">Get in touch →</span></div>
+    </div>
+    <div>
+      <p class="index-label">Three areas of expertise</p>
+      <ul class="index">
+        <li><span class="n">01</span><span class="t">Statecraft, Governance &amp; Institutional Transformation</span><span class="a">→</span></li>
+        <li><span class="n">02</span><span class="t">Nation Branding, Strategic Communications &amp; Global Positioning</span><span class="a">→</span></li>
+        <li><span class="n">03</span><span class="t">Investment Diplomacy, Market Access &amp; Strategic Partnerships</span><span class="a">→</span></li>
+      </ul>
+    </div>
+  </div>
+  <span class="tag">4 · Index</span>
+</section>
+
+</body>
+</html>

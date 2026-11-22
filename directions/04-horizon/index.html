@@ -1,0 +1,370 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Silver Fox Horizons</title>
+  <meta name="description" content="Silver Fox Horizons is an international strategic advisory firm partnering with governments, institutions and businesses to strengthen state capacity, elevate global influence and unlock investment opportunities across Africa.">
+  <meta name="theme-color" content="#000000">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..500;1,6..96,400..500&family=Inter:wght@300;400;500&display=swap">
+  <link rel="preload" as="image" href="assets/gen-horizon-dawn.webp" fetchpriority="high">
+  <link rel="stylesheet" href="style.css">
+  <script>
+    (function () {
+      var d = document.documentElement;
+      d.classList.remove('no-js');
+      d.classList.add('js');
+      if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        d.classList.add('intro');
+        // Safety: if the motion scripts never arrive, show the finished page.
+        setTimeout(function () { if (!window.__horizon) d.classList.remove('intro'); }, 3200);
+      }
+    })();
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
+  <script defer src="main.js"></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <!-- The horizon: one line, fixed at 58% of the viewport, behind every scene (desktop). -->
+  <div class="horizon" aria-hidden="true">
+    <span class="horizon__base"></span>
+    <span class="horizon__fill"></span>
+    <span class="horizon__index"><span class="horizon__index-num">I</span></span>
+  </div>
+
+  <header class="site-header" id="site-header">
+    <a class="brand" href="#top">Silver Fox Horizons</a>
+    <nav class="nav" aria-label="Primary">
+      <ul class="nav__list">
+        <li><a href="#about">About</a></li>
+        <li><a href="#expertise">Expertise</a></li>
+        <li><a href="#insights">Insights</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn--small header-cta" href="#contact">Get in Touch</a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu">
+      <span class="menu-toggle__label">Menu</span>
+      <span class="menu-toggle__bars" aria-hidden="true"><span></span><span></span></span>
+    </button>
+  </header>
+
+  <div class="menu" id="menu" hidden>
+    <nav aria-label="Mobile">
+      <ol class="menu__list">
+        <li><a href="#about"><span class="menu__num">I</span>About</a></li>
+        <li><a href="#expertise"><span class="menu__num">II</span>Expertise</a></li>
+        <li><a href="#insights"><span class="menu__num">VII</span>Insights</a></li>
+        <li><a href="#contact"><span class="menu__num">VIII</span>Contact</a></li>
+      </ol>
+    </nav>
+    <span class="menu__line" aria-hidden="true"></span>
+    <a class="btn menu__cta" href="#contact">Get in Touch</a>
+  </div>
+
+  <main id="main">
+
+    <!-- HERO -->
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="bandwrap bandwrap--hero" style="--f:.70;--h:.805;--s:1.22;--fm:.805">
+        <h1 class="masthead masthead--light" id="hero-title">
+          <span class="masthead__mask"><span class="masthead__inner"><span class="mw">Silver</span> <span class="mw">Fox</span> <span class="mw">Horizons</span></span></span>
+        </h1>
+        <div class="band-holder">
+          <span class="band-line" aria-hidden="true"></span>
+          <div class="band">
+            <div class="band__media">
+              <img src="assets/gen-horizon-dawn.webp" width="2000" height="1130" fetchpriority="high" decoding="async"
+                   alt="A distant city on a flat sea horizon at dawn, under a pale gold sky.">
+            </div>
+            <p class="masthead masthead--ink" aria-hidden="true">
+              <span class="masthead__mask"><span class="masthead__inner"><span class="mw">Silver</span> <span class="mw">Fox</span> <span class="mw">Horizons</span></span></span>
+            </p>
+          </div>
+        </div>
+        <div class="hero__below">
+          <p class="hero__tagline"><span class="tl">Shaping Africa&rsquo;s Future.</span> <span class="tl tl--it">Connecting Global Opportunity.</span></p>
+          <p class="caption hero__caption">Dawn &middot; Atlantic coast &middot; 05:58</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- I. MANDATE -->
+    <section class="scene scene--mandate" id="mandate" data-scene="I" aria-labelledby="mandate-label">
+      <p class="numeral" aria-hidden="true">I</p>
+      <div class="scene__meta">
+        <h2 class="label" id="mandate-label">Mandate</h2>
+      </div>
+      <p class="mandate">
+        <span class="mandate__above split">Silver Fox Horizons is an international strategic advisory firm partnering with governments, institutions and businesses</span>
+        <span class="mandate__below split">to strengthen state capacity, elevate global influence and unlock investment opportunities across <em>Africa</em>.</span>
+      </p>
+    </section>
+
+    <!-- ABOUT (chapter I, continued) -->
+    <section class="scene scene--about" id="about" data-scene="I" aria-labelledby="about-title">
+      <div class="scene__meta">
+        <span class="label">About</span>
+        <span class="caption">The firm</span>
+      </div>
+      <h2 class="about__statement split" id="about-title">We work at the intersection of statecraft, international positioning and <em>investment diplomacy</em>.</h2>
+      <div class="about__body">
+        <p class="about__lead">We work alongside the people shaping Africa&rsquo;s next chapter.</p>
+        <p>We bring policy, communications and commercial experience together, so that reform, reputation and investment move in the same direction.</p>
+      </div>
+      <ul class="values" aria-label="Values">
+        <li><span class="values__idx">i</span><span class="values__name">Trusted Advisor</span></li>
+        <li><span class="values__idx">ii</span><span class="values__name">Global Perspective</span></li>
+        <li><span class="values__idx">iii</span><span class="values__name">African Focus</span></li>
+      </ul>
+    </section>
+
+    <!-- II - IV. EXPERTISE -->
+    <div class="expertise" id="expertise">
+      <h2 class="sr-only">Expertise</h2>
+
+      <section class="scene scene--chapter" id="statecraft" data-scene="II" aria-labelledby="ch2-title">
+        <p class="numeral" aria-hidden="true">II</p>
+        <div class="scene__meta">
+          <span class="label">Expertise</span>
+          <span class="caption">01 / 03</span>
+        </div>
+        <div class="bandwrap" style="--f:.72;--h:.775;--s:1">
+          <h3 class="chapter-title split" id="ch2-title">Statecraft, Governance &amp; <em>Institutional Transformation</em></h3>
+          <div class="band-holder">
+            <span class="band-line" aria-hidden="true"></span>
+            <div class="band">
+              <div class="band__media">
+                <img src="assets/gen-parliament.webp" width="2000" height="1130" loading="lazy" decoding="async"
+                     alt="A pale stone colonnade above wide steps in late golden light, two figures in suits walking up.">
+              </div>
+            </div>
+          </div>
+          <div class="band-below">
+            <p class="chapter-line">Helping governments strengthen institutional capacity, design and implement reforms, and improve public-sector performance.</p>
+            <p class="caption">Seat of government &middot; 17:42</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="scene scene--chapter scene--mirror" id="positioning" data-scene="III" aria-labelledby="ch3-title">
+        <p class="numeral" aria-hidden="true">III</p>
+        <div class="scene__meta">
+          <span class="label">Expertise</span>
+          <span class="caption">02 / 03</span>
+        </div>
+        <div class="bandwrap" style="--f:.66;--h:.70;--s:1">
+          <h3 class="chapter-title split" id="ch3-title">Nation Branding, Strategic Communications &amp; <em>Global Positioning</em></h3>
+          <div class="band-holder">
+            <span class="band-line" aria-hidden="true"></span>
+            <div class="band">
+              <div class="band__media">
+                <img src="assets/gen-skyline-bluehour.webp" width="2000" height="1130" loading="lazy" decoding="async"
+                     alt="An East African capital at blue hour: a glass tower lit from within against green hills.">
+              </div>
+            </div>
+          </div>
+          <div class="band-below">
+            <p class="chapter-line">Supporting governments in strengthening their international reputation, soft power and global visibility.</p>
+            <p class="caption">East African capital &middot; Blue hour &middot; 18:51</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="scene scene--chapter" id="investment" data-scene="IV" aria-labelledby="ch4-title">
+        <p class="numeral" aria-hidden="true">IV</p>
+        <div class="scene__meta">
+          <span class="label">Expertise</span>
+          <span class="caption">03 / 03</span>
+        </div>
+        <div class="bandwrap" style="--f:.75;--h:.815;--s:1.06">
+          <h3 class="chapter-title split" id="ch4-title">Investment Diplomacy, Market Access &amp; <em>Strategic Partnerships</em></h3>
+          <div class="band-holder">
+            <span class="band-line" aria-hidden="true"></span>
+            <div class="band">
+              <div class="band__media">
+                <img src="assets/gen-port.webp" width="2000" height="1130" loading="lazy" decoding="async"
+                     alt="A container port at sunset: gantry cranes above a loaded ship, the sun low over the water.">
+              </div>
+            </div>
+          </div>
+          <div class="band-below">
+            <p class="chapter-line">Helping international companies and investors navigate African markets, engage with governments and develop strategic investment and commercial partnerships.</p>
+            <p class="caption">Deep-water port &middot; Dusk &middot; 18:20</p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- V. REACH -->
+    <section class="scene scene--reach" id="reach" data-scene="V" aria-labelledby="reach-title">
+      <p class="numeral" aria-hidden="true">V</p>
+      <div class="scene__meta">
+        <h2 class="label" id="reach-title">Reach</h2>
+        <span class="caption">Demo figures</span>
+      </div>
+      <figure class="map" aria-hidden="true">
+        <svg class="map__svg" role="presentation" focusable="false"></svg>
+      </figure>
+      <p class="sr-only">Map: the outline of Africa resting on the horizon, with lines rising towards London, New York and Dubai.</p>
+      <ul class="figures">
+        <li class="figure">
+          <span class="figure__num"><span class="count" data-to="24">24</span></span>
+          <span class="figure__label">African countries engaged</span>
+        </li>
+        <li class="figure">
+          <span class="figure__num">$<span class="count" data-to="6.8" data-dec="1">6.8</span>B</span>
+          <span class="figure__label">Investment facilitated</span>
+        </li>
+        <li class="figure">
+          <span class="figure__num"><span class="count" data-to="60">60</span>+</span>
+          <span class="figure__label">Reform programmes supported</span>
+        </li>
+        <li class="figure">
+          <span class="figure__num"><span class="count" data-to="15">15</span></span>
+          <span class="figure__label">Years at the centre of government</span>
+        </li>
+      </ul>
+    </section>
+
+    <!-- VI. APPROACH -->
+    <section class="scene scene--approach" id="approach" data-scene="VI" aria-labelledby="approach-title">
+      <p class="numeral" aria-hidden="true">VI</p>
+      <div class="scene__meta">
+        <h2 class="label" id="approach-title">Approach</h2>
+        <span class="caption">Four stations</span>
+      </div>
+      <ol class="stations">
+        <li class="station">
+          <div class="station__above"><span class="station__idx">01</span><h3 class="station__title">Understand</h3></div>
+          <span class="station__mast" aria-hidden="true"></span>
+          <span class="station__dot" aria-hidden="true"></span>
+          <p class="station__text">We start with the context: the institutions, the people and what has already been tried.</p>
+        </li>
+        <li class="station">
+          <div class="station__above"><span class="station__idx">02</span><h3 class="station__title">Strategise</h3></div>
+          <span class="station__mast" aria-hidden="true"></span>
+          <span class="station__dot" aria-hidden="true"></span>
+          <p class="station__text">We agree clear priorities and a realistic plan to reach them.</p>
+        </li>
+        <li class="station">
+          <div class="station__above"><span class="station__idx">03</span><h3 class="station__title">Partner</h3></div>
+          <span class="station__mast" aria-hidden="true"></span>
+          <span class="station__dot" aria-hidden="true"></span>
+          <p class="station__text">We work alongside your teams and bring in the right partners.</p>
+        </li>
+        <li class="station">
+          <div class="station__above"><span class="station__idx">04</span><h3 class="station__title">Deliver</h3></div>
+          <span class="station__mast" aria-hidden="true"></span>
+          <span class="station__dot" aria-hidden="true"></span>
+          <p class="station__text">We stay through implementation and measure what changes.</p>
+        </li>
+      </ol>
+    </section>
+
+    <!-- VII. INSIGHTS -->
+    <section class="scene scene--insights" id="insights" data-scene="VII" aria-labelledby="insights-title">
+      <p class="numeral" aria-hidden="true">VII</p>
+      <div class="scene__meta">
+        <span class="label">Sample articles</span>
+        <span class="caption">Placeholders</span>
+      </div>
+      <h2 class="insights__title split" id="insights-title">Insights</h2>
+      <ul class="strip">
+        <li class="frame">
+          <article>
+            <div class="frame__mediawrap">
+              <p class="frame__meta">Governance</p>
+              <a class="frame__media" href="#insights" tabindex="-1" aria-hidden="true">
+                <img src="assets/gen-state-room.webp" width="2000" height="1130" loading="lazy" decoding="async" alt="">
+              </a>
+              <p class="frame__foot"><time datetime="2026-11-12">12 November 2026</time><span class="frame__code" aria-hidden="true">VII&thinsp;&middot;&thinsp;A</span></p>
+            </div>
+            <h3 class="frame__title"><a href="#insights">Building Delivery Units That Outlast an Election Cycle</a></h3>
+            <p class="frame__text">What keeps a central delivery unit effective when leadership changes.</p>
+          </article>
+        </li>
+        <li class="frame">
+          <article>
+            <div class="frame__mediawrap">
+              <p class="frame__meta">Investment</p>
+              <a class="frame__media" href="#insights" tabindex="-1" aria-hidden="true">
+                <img src="assets/insight-skyline.webp" width="1000" height="562" loading="lazy" decoding="async" alt="">
+              </a>
+              <p class="frame__foot"><time datetime="2026-10-28">28 October 2026</time><span class="frame__code" aria-hidden="true">VII&thinsp;&middot;&thinsp;B</span></p>
+            </div>
+            <h3 class="frame__title"><a href="#insights">Engaging African Governments as an Investor</a></h3>
+            <p class="frame__text">Practical lessons for companies entering markets where the state is a key partner.</p>
+          </article>
+        </li>
+        <li class="frame">
+          <article>
+            <div class="frame__mediawrap">
+              <p class="frame__meta">Nation Branding</p>
+              <a class="frame__media" href="#insights" tabindex="-1" aria-hidden="true">
+                <img src="assets/governance.webp" width="2000" height="960" loading="lazy" decoding="async" alt="">
+              </a>
+              <p class="frame__foot"><time datetime="2026-10-09">9 October 2026</time><span class="frame__code" aria-hidden="true">VII&thinsp;&middot;&thinsp;C</span></p>
+            </div>
+            <h3 class="frame__title"><a href="#insights">Reputation as a National Asset</a></h3>
+            <p class="frame__text">Why a country&rsquo;s global image is built by its institutions, not its slogans.</p>
+          </article>
+        </li>
+      </ul>
+    </section>
+
+    <!-- VIII. CONTACT -->
+    <section class="scene scene--contact" id="contact" data-scene="VIII" aria-labelledby="contact-title">
+      <p class="numeral" aria-hidden="true">VIII</p>
+      <div class="scene__meta">
+        <span class="label">Contact</span>
+              </div>
+      <div class="bandwrap" style="--f:.62;--h:.65;--s:1">
+        <h2 class="contact__title split" id="contact-title">Let&rsquo;s Build <em>What&rsquo;s Next.</em></h2>
+        <div class="band-holder">
+          <span class="band-line" aria-hidden="true"></span>
+          <div class="band">
+            <div class="band__media">
+              <img src="assets/gen-corridor.webp" width="2000" height="1130" loading="lazy" decoding="async"
+                   alt="A man in a suit walking down a glass corridor towards a city skyline at sunset.">
+            </div>
+          </div>
+        </div>
+        <div class="band-below contact__below">
+          <p class="contact__text">Tell us what you are working on. We will tell you honestly how we can help.</p>
+          <a class="btn btn--line contact__btn" href="#contact">Contact Us<span class="btn__arrow" aria-hidden="true"></span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer__top">
+      <p class="footer__brand">Silver Fox Horizons</p>
+      <p class="footer__tag">Strategic Advisory &middot; Global Perspective &middot; African Focus</p>
+    </div>
+    <nav class="footer__nav" aria-label="Footer">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#expertise">Expertise</a></li>
+        <li><a href="#insights">Insights</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <a class="footer__social" href="#" aria-label="Silver Fox Horizons on LinkedIn">
+      <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path fill="currentColor" d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9.75h4v11H3v-11Zm6.5 0h3.83v1.5h.05c.53-.95 1.84-1.95 3.79-1.95 4.05 0 4.8 2.5 4.8 5.75v5.7h-4v-5.05c0-1.2-.02-2.75-1.75-2.75-1.75 0-2.02 1.3-2.02 2.66v5.14h-4v-11Z"/></svg>
+    </a>
+    <div class="footer__legal">
+      <p>&copy; 2026 Silver Fox Horizons</p>
+      <p class="footer__note">Design concept. Figures and articles are placeholders.</p>
+    </div>
+  </footer>
+</body>
+</html>

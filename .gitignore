@@ -1,0 +1,17 @@
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Tooling output
+.playwright-mcp/
+node_modules/
+.claude/settings.local.json
+.claude/skills/
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Original full-size media (large, not used by the page)
+assets/source/

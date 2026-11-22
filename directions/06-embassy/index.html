@@ -1,0 +1,405 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Silver Fox Horizons</title>
+  <meta name="description" content="Silver Fox Horizons is an international strategic advisory firm partnering with governments, institutions and businesses across Africa.">
+  <meta name="theme-color" content="#F3EEE4">
+  <script>
+    // Motion states only apply while main.js is alive; if it never runs, show everything.
+    document.documentElement.classList.add('js');
+    setTimeout(function () { if (!window.__sfhReady) document.documentElement.classList.remove('js'); }, 2500);
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500&display=swap">
+  <link rel="preload" as="image" href="assets/hero-golden-city.webp" fetchpriority="high">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Placeholder monogram: a simple fine-line seal, to be replaced by the real mark -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <symbol id="seal" viewBox="0 0 48 48">
+        <circle cx="24" cy="24" r="23" fill="none" stroke="currentColor" stroke-width=".8"/>
+        <circle cx="24" cy="24" r="20.2" fill="none" stroke="currentColor" stroke-width=".45"/>
+        <text x="24.6" y="28.6" text-anchor="middle" fill="currentColor" stroke="currentColor" stroke-width=".28" font-family="Cormorant Garamond, Garamond, serif" font-size="13.4" font-weight="600" letter-spacing="1.1">SFH</text>
+      </symbol>
+    </defs>
+  </svg>
+
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-header" id="site-header">
+    <div class="container site-header__inner">
+      <nav class="nav" aria-label="Primary">
+        <ul class="nav__list nav__list--left">
+          <li><a href="#about">About</a></li>
+          <li><a href="#expertise">Expertise</a></li>
+        </ul>
+        <a class="brand" href="#top" aria-label="Silver Fox Horizons, back to top">
+          <svg class="brand__seal" aria-hidden="true" focusable="false"><use href="#seal"/></svg>
+          <span class="brand__name">Silver Fox Horizons</span>
+        </a>
+        <ul class="nav__list nav__list--right">
+          <li><a href="#insights">Insights</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a class="btn-line" href="#contact">Get in Touch</a></li>
+        </ul>
+      </nav>
+      <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu">
+        <span class="menu-btn__label">Menu</span>
+        <span class="menu-btn__lines" aria-hidden="true"><span></span><span></span></span>
+      </button>
+    </div>
+    <div class="container"><div class="dbl" aria-hidden="true"></div></div>
+  </header>
+
+  <div class="menu" id="menu" role="dialog" aria-modal="true" aria-label="Site menu" hidden>
+    <div class="menu__top container">
+      <span class="brand brand--menu" aria-hidden="true">
+        <svg class="brand__seal"><use href="#seal"/></svg>
+        <span class="brand__name">Silver Fox Horizons</span>
+      </span>
+      <button class="menu__close" type="button">Close</button>
+    </div>
+    <nav class="menu__nav" aria-label="Mobile">
+      <ol>
+        <li><a href="#about"><span class="menu__no">I</span>About</a></li>
+        <li><a href="#expertise"><span class="menu__no">II</span>Expertise</a></li>
+        <li><a href="#insights"><span class="menu__no">III</span>Insights</a></li>
+        <li><a href="#contact"><span class="menu__no">IV</span>Contact</a></li>
+      </ol>
+      <a class="btn" href="#contact">Get in Touch</a>
+    </nav>
+    <p class="menu__foot">Strategic Advisory · Global Perspective · African Focus</p>
+  </div>
+
+  <main id="main">
+
+    <!-- HERO -->
+    <section class="hero" id="top" aria-labelledby="hero-title" data-io>
+      <div class="container hero__inner">
+        <p class="kicker"><span class="kicker__rule" aria-hidden="true"></span><span>International Strategic Advisory</span><span class="kicker__rule" aria-hidden="true"></span></p>
+        <h1 class="hero__title" id="hero-title">
+          <span class="line"><span>Shaping Africa’s Future.</span></span>
+          <span class="line line--it"><span>Connecting Global Opportunity.</span></span>
+        </h1>
+
+        <figure class="plate plate--hero">
+          <div class="plate__mat">
+            <div class="plate__img">
+              <img src="assets/hero-golden-city.webp" width="1672" height="941" fetchpriority="high" decoding="async"
+                   alt="A capital city at golden hour: a colonnaded government building flying a national flag, glass towers and a river beyond.">
+            </div>
+          </div>
+          <figcaption class="plate__cap"><span class="plate__no">Plate I</span><em>Capital city at golden hour</em></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- MANDATE -->
+    <section class="mandate" id="mandate" aria-labelledby="mandate-h">
+      <div class="container">
+        <div class="sec-rule" data-io>
+          <span class="sec-rule__line" aria-hidden="true"></span>
+          <h2 class="label" id="mandate-h">The Mandate</h2>
+          <span class="sec-rule__line" aria-hidden="true"></span>
+        </div>
+        <p class="mandate__text" data-io data-reveal>
+          <span class="sc">Silver Fox Horizons</span> is an international strategic advisory firm partnering with governments, institutions and businesses to strengthen state capacity<span class="fn"><button class="fn__mark" type="button" aria-describedby="fn-1" aria-label="Note 1">1</button><span class="fn__note" role="tooltip" id="fn-1"><span class="fn__head">Note 1</span>State capacity: the ability of public institutions to decide, deliver and sustain policy.</span></span>, elevate global influence and unlock investment opportunities across Africa.
+        </p>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about" id="about" aria-labelledby="about-h">
+      <div class="container">
+        <div class="sec-rule" data-io>
+          <span class="sec-rule__line" aria-hidden="true"></span>
+          <p class="label">About the Firm</p>
+          <span class="sec-rule__line" aria-hidden="true"></span>
+        </div>
+
+        <div class="about__grid">
+          <figure class="print" data-io>
+            <div class="print__frame">
+              <div class="print__mat">
+                <div class="print__img">
+                  <img src="assets/portrait.webp" width="1400" height="1496" loading="lazy" decoding="async"
+                       alt="Portrait of a woman in a patterned head wrap and gold earrings, looking up and into the distance.">
+                </div>
+              </div>
+            </div>
+            <figcaption class="print__label">
+              <span class="plate__no">Plate II</span>
+              <em>Looking ahead</em>
+              <span class="print__meta">Editorial portrait</span>
+            </figcaption>
+          </figure>
+
+          <div class="about__text" data-io data-reveal>
+            <h2 class="display-2" id="about-h">We work alongside the people shaping Africa’s next chapter.</h2>
+            <span class="dbl dbl--short" aria-hidden="true"></span>
+            <p class="body-lg">We bring policy, communications and commercial experience together, so that reform, reputation and investment move in the same direction.</p>
+          </div>
+        </div>
+
+        <div class="values" data-io>
+          <p class="label label--small">Values</p>
+          <ul class="triad">
+            <li style="--d:0ms"><span class="triad__no">I</span><span class="triad__name">Trusted Advisor</span></li>
+            <li style="--d:160ms"><span class="triad__no">II</span><span class="triad__name">Global Perspective</span></li>
+            <li style="--d:320ms"><span class="triad__no">III</span><span class="triad__name">African Focus</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERTISE -->
+    <section class="expertise" id="expertise" aria-labelledby="expertise-h">
+      <div class="container">
+        <div class="sec-rule" data-io>
+          <span class="sec-rule__line" aria-hidden="true"></span>
+          <h2 class="label" id="expertise-h">Expertise</h2>
+          <span class="sec-rule__line" aria-hidden="true"></span>
+        </div>
+        <p class="sec-lead" data-io data-reveal>We work at the intersection of statecraft, international positioning and investment diplomacy<span class="fn"><button class="fn__mark" type="button" aria-describedby="fn-2" aria-label="Note 2">2</button><span class="fn__note" role="tooltip" id="fn-2"><span class="fn__head">Note 2</span>Investment diplomacy: national priorities and commercial interest, agreed at the same table.</span></span>.</p>
+
+        <div class="articles">
+          <article class="art" data-io aria-labelledby="art-1">
+            <figure class="plate plate--art">
+              <div class="plate__mat">
+                <div class="plate__img">
+                  <img src="assets/gen-parliament.webp" width="2000" height="1130" loading="lazy" decoding="async"
+                       alt="Two men in suits climb the stone steps of a pale colonnaded government building in late sun, framed by palms.">
+                </div>
+              </div>
+              <figcaption class="plate__cap"><span class="plate__no">Plate III</span><em>Colonnade at the seat of government, late afternoon</em></figcaption>
+            </figure>
+            <div class="art__body">
+              <p class="art__no"><span>Article</span> I</p>
+              <h3 class="art__title" id="art-1">Statecraft, Governance <span class="amp">&amp;</span> Institutional Transformation</h3>
+              <span class="dbl dbl--short" aria-hidden="true"></span>
+              <p class="art__text">Helping governments strengthen institutional capacity, design and implement reforms, and improve public-sector performance.</p>
+              <p class="cf"><span class="cf__k">cf.</span> <a href="#insight-1">Building Delivery Units That Outlast an Election Cycle</a></p>
+            </div>
+          </article>
+
+          <article class="art art--flip" data-io aria-labelledby="art-2">
+            <figure class="plate plate--art">
+              <div class="plate__mat">
+                <div class="plate__img">
+                  <img src="assets/gen-skyline-bluehour.webp" width="2000" height="1130" loading="lazy" decoding="async"
+                       alt="An East African capital skyline at blue hour: a lit glass tower against green hills and a pink horizon.">
+                </div>
+              </div>
+              <figcaption class="plate__cap"><span class="plate__no">Plate IV</span><em>Capital skyline at blue hour</em></figcaption>
+            </figure>
+            <div class="art__body">
+              <p class="art__no"><span>Article</span> II</p>
+              <h3 class="art__title" id="art-2">Nation Branding, Strategic Communications <span class="amp">&amp;</span> Global Positioning</h3>
+              <span class="dbl dbl--short" aria-hidden="true"></span>
+              <p class="art__text">Supporting governments in strengthening their international reputation, soft power and global visibility.</p>
+              <p class="cf"><span class="cf__k">cf.</span> <a href="#insight-3">Reputation as a National Asset</a></p>
+            </div>
+          </article>
+
+          <article class="art" data-io aria-labelledby="art-3">
+            <figure class="plate plate--art">
+              <div class="plate__mat">
+                <div class="plate__img">
+                  <img src="assets/gen-port.webp" width="2000" height="1130" loading="lazy" decoding="async"
+                       alt="A container ship moored beneath gantry cranes at a port at sunset.">
+                </div>
+              </div>
+              <figcaption class="plate__cap"><span class="plate__no">Plate V</span><em>Container terminal at sunset</em></figcaption>
+            </figure>
+            <div class="art__body">
+              <p class="art__no"><span>Article</span> III</p>
+              <h3 class="art__title" id="art-3">Investment Diplomacy, Market Access <span class="amp">&amp;</span> Strategic Partnerships</h3>
+              <span class="dbl dbl--short" aria-hidden="true"></span>
+              <p class="art__text">Helping international companies and investors navigate African markets, engage with governments and develop strategic investment and commercial partnerships.</p>
+              <p class="cf"><span class="cf__k">cf.</span> <a href="#insight-2">Engaging African Governments as an Investor</a></p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- REACH: the one black band -->
+    <section class="reach" id="reach" aria-labelledby="reach-h" data-io>
+      <div class="container">
+        <div class="sec-rule sec-rule--gold" data-io>
+          <span class="sec-rule__line" aria-hidden="true"></span>
+          <h2 class="label" id="reach-h">Reach<span class="fn fn--light"><button class="fn__mark" type="button" aria-describedby="fn-3" aria-label="Note 3">3</button><span class="fn__note" role="tooltip" id="fn-3"><span class="fn__head">Note 3</span>Figures shown are placeholders for this design concept.</span></span></h2>
+          <span class="sec-rule__line" aria-hidden="true"></span>
+        </div>
+
+        <div class="reach__grid">
+          <figure class="atlas" data-io>
+            <svg class="atlas__svg" id="atlas" viewBox="0 0 720 740" role="img" aria-label="Map of Africa marking a demo selection of twelve cities, from Casablanca and Cairo to Johannesburg."></svg>
+            <figcaption class="atlas__cap"><span class="plate__no">Plate VI</span><em>Africa, with a demo selection of cities</em></figcaption>
+          </figure>
+
+          <dl class="figures">
+            <div class="figure" style="--d:0ms">
+              <dt>African countries engaged</dt>
+              <dd><span class="num" data-to="24">24</span></dd>
+            </div>
+            <div class="figure" style="--d:140ms">
+              <dt>Investment facilitated</dt>
+              <dd><span class="unit unit--pre">$</span><span class="num" data-to="6.8" data-dec="1">6.8</span><span class="unit">B</span></dd>
+            </div>
+            <div class="figure" style="--d:280ms">
+              <dt>Reform programmes supported</dt>
+              <dd><span class="num" data-to="60">60</span><span class="unit unit--plus">+</span></dd>
+            </div>
+            <div class="figure" style="--d:420ms">
+              <dt>Years at the centre of government</dt>
+              <dd><span class="num" data-to="15">15</span></dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- APPROACH -->
+    <section class="approach" id="approach" aria-labelledby="approach-h">
+      <div class="container">
+        <div class="sec-rule" data-io>
+          <span class="sec-rule__line" aria-hidden="true"></span>
+          <p class="label">Approach</p>
+          <span class="sec-rule__line" aria-hidden="true"></span>
+        </div>
+        <h2 class="display-2 display-2--center" id="approach-h" data-io data-reveal>Terms of Engagement</h2>
+
+        <ol class="clauses">
+          <li class="clause" data-io>
+            <span class="clause__no">1.</span>
+            <h3 class="clause__title">Understand</h3>
+            <p class="clause__text">We start with the context: the institutions, the people and what has already been tried.</p>
+          </li>
+          <li class="clause" data-io>
+            <span class="clause__no">2.</span>
+            <h3 class="clause__title">Strategise</h3>
+            <p class="clause__text">We agree clear priorities and a realistic plan to reach them.</p>
+          </li>
+          <li class="clause" data-io>
+            <span class="clause__no">3.</span>
+            <h3 class="clause__title">Partner</h3>
+            <p class="clause__text">We work alongside your teams and bring in the right partners.</p>
+          </li>
+          <li class="clause" data-io>
+            <span class="clause__no">4.</span>
+            <h3 class="clause__title">Deliver</h3>
+            <p class="clause__text">We stay through implementation and measure what changes.</p>
+          </li>
+        </ol>
+
+        <div class="signatures" aria-hidden="true" data-io>
+          <div class="signature"><span class="signature__line"></span><span class="signature__k">For the client</span></div>
+          <span class="signatures__amp">&amp;</span>
+          <div class="signature"><span class="signature__line"></span><span class="signature__k">For Silver Fox Horizons</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INSIGHTS -->
+    <section class="insights" id="insights" aria-labelledby="insights-h">
+      <div class="container">
+        <div class="sec-rule" data-io>
+          <span class="sec-rule__line" aria-hidden="true"></span>
+          <p class="label">Contents</p>
+          <span class="sec-rule__line" aria-hidden="true"></span>
+        </div>
+        <div class="toc-head" data-io data-reveal>
+          <h2 class="display-2 display-2--center" id="insights-h">Insights</h2>
+          <p class="toc-head__note"><em>Sample articles for this design concept</em></p>
+        </div>
+
+        <ol class="toc">
+          <li class="toc__item" data-io>
+            <a class="toc__link" href="#" id="insight-1">
+              <span class="toc__margin"><span class="toc__no">No. 1</span><span class="toc__cat">Governance</span></span>
+              <span class="toc__main">
+                <span class="toc__line"><span class="toc__title">Building Delivery Units That Outlast an Election Cycle</span><span class="toc__leader" aria-hidden="true"></span><time class="toc__date" datetime="2026-11-12">12 November 2026</time></span>
+                <span class="toc__sum">What keeps a central delivery unit effective when leadership changes.</span>
+              </span>
+            </a>
+          </li>
+          <li class="toc__item" data-io>
+            <a class="toc__link" href="#" id="insight-2">
+              <span class="toc__margin"><span class="toc__no">No. 2</span><span class="toc__cat">Investment</span></span>
+              <span class="toc__main">
+                <span class="toc__line"><span class="toc__title">Engaging African Governments as an Investor</span><span class="toc__leader" aria-hidden="true"></span><time class="toc__date" datetime="2026-10-28">28 October 2026</time></span>
+                <span class="toc__sum">Practical lessons for companies entering markets where the state is a key partner.</span>
+              </span>
+            </a>
+          </li>
+          <li class="toc__item" data-io>
+            <a class="toc__link" href="#" id="insight-3">
+              <span class="toc__margin"><span class="toc__no">No. 3</span><span class="toc__cat">Nation Branding</span></span>
+              <span class="toc__main">
+                <span class="toc__line"><span class="toc__title">Reputation as a National Asset</span><span class="toc__leader" aria-hidden="true"></span><time class="toc__date" datetime="2026-10-09">9 October 2026</time></span>
+                <span class="toc__sum">Why a country’s global image is built by its institutions, not its slogans.</span>
+              </span>
+            </a>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact" id="contact" aria-labelledby="contact-h">
+      <div class="container">
+        <div class="letter" data-io>
+          <div class="letter__head">
+            <svg class="letter__seal" aria-hidden="true" focusable="false"><use href="#seal"/></svg>
+            <p class="label label--small">Correspondence</p>
+          </div>
+          <span class="dbl" aria-hidden="true"></span>
+          <h2 class="letter__title" id="contact-h">Let’s Build What’s Next.</h2>
+          <p class="letter__text"><span>Tell us what you are working on.</span> <span>We will tell you honestly how we can help.</span></p>
+          <a class="btn" href="#">Contact Us</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="dbl" aria-hidden="true"></div>
+      <div class="footer__inner">
+        <a class="brand brand--footer" href="#top" aria-label="Silver Fox Horizons, back to top">
+          <svg class="brand__seal" aria-hidden="true" focusable="false"><use href="#seal"/></svg>
+          <span class="brand__name">Silver Fox Horizons</span>
+        </a>
+        <p class="footer__motto"><em>Strategic Advisory · Global Perspective · African Focus</em></p>
+        <nav class="footer__nav" aria-label="Footer">
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#expertise">Expertise</a></li>
+            <li><a href="#insights">Insights</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li>
+              <a class="footer__in" href="#" aria-label="Silver Fox Horizons on LinkedIn">
+                <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path fill="currentColor" d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9.75h4v11H3v-11Zm6.5 0h3.83v1.5h.05c.53-.95 1.84-1.95 3.79-1.95 4.05 0 4.8 2.5 4.8 5.76v5.69h-4v-5.04c0-1.2-.02-2.75-1.75-2.75-1.75 0-2.02 1.3-2.02 2.66v5.13h-4v-11Z"/></svg>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="footer__base">
+        <p>© 2026 Silver Fox Horizons</p>
+        <p>Design concept. Figures and articles are placeholders.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js" defer></script>
+</body>
+</html>

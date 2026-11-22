@@ -186,7 +186,7 @@
   /* ---------- Desktop: pinned night flight scrubbed by scroll ---------- */
   const mm = gsap.matchMedia();
 
-  mm.add('(min-width: 768px)', () => {
+  mm.add('(min-width: 1px)', () => {
     const COUNT = 120;
     const frames = new Array(COUNT);
     const ready = new Array(COUNT).fill(false);
@@ -275,12 +275,6 @@
     };
   });
 
-  /* ---------- Phones: the same flight as a quiet looping video, no pinning ---------- */
-  mm.add('(max-width: 767px)', () => {
-    playVideo();
-    const st = ScrollTrigger.create({ trigger: hero, start: 'bottom 72px', onEnter: () => solidHeader(true), onLeaveBack: () => solidHeader(false) });
-    return () => { video.pause(); st.kill(); };
-  });
 
   /* ---------- Expertise tiles: heading lines rise, then the tiles rise one after another ---------- */
   // Created after the hero pin so their positions include the pinned scroll distance

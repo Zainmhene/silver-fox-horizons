@@ -160,7 +160,7 @@
     /* Hero film */
     const mm = gsap.matchMedia();
 
-    mm.add('(min-width: 768px)', () => {
+    mm.add('(min-width: 1px)', () => {
       const FRAME_COUNT = 120;
       const frames = new Array(FRAME_COUNT);
       const loaded = new Array(FRAME_COUNT).fill(false);
@@ -238,11 +238,6 @@
         window.removeEventListener('resize', resize);
         hero.classList.remove('is-canvas');
       };
-    });
-
-    mm.add('(max-width: 767px)', () => {
-      playHeroVideo();
-      return () => heroVideo.pause();
     });
 
     /* Labels outside the hero */

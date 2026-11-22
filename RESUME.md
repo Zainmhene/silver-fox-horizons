@@ -16,6 +16,20 @@
 
 ## Status (2026-11-22, latest): hero, tiles, the lady's section and Focus (map) all APPROVED by Moudy. Mobile polish pass (update 14) APPROVED ("Looks good"). Next section to be picked together.
 
+## v3 update 17 (2026-11-22): contact section + footer, demo prep, git
+- What was added:
+  - `#contact` replaces the old `#next` placeholder. It is navy, with the closing line "Let's talk about what comes next." (a DRAFT), contact details as bracketed placeholders, and an enquiry form (name, organisation, email, area of interest, message).
+  - The form is DEMO ONLY: it checks the fields, then says "Thank you. This is a demo, so your message was not sent."
+  - Footer: logo, nav, a placeholder for social links, © 2026, and placeholders for Privacy and Terms.
+- Checked at 1440 and 390: no console errors, no sideways scroll.
+- The header and menu still link to `#insights`, which doesn't exist yet.
+- Git:
+  - Repo initialised (`main`, first commit 885a423). `.claude/skills/` added to `.gitignore`.
+  - Remote: https://github.com/ZainDStyles/silver-fox-horizons.git
+  - Moudy chose PUBLIC + GitHub Pages and will create the empty repo on github.com himself. Then: push, and turn on Pages (main / root).
+  - The demo link will be https://zaindstyles.github.io/silver-fox-horizons/site/
+- `gh` CLI is not installed.
+
 ## v3 update 16 (2026-11-22): faint dot texture in the Expertise section (Moudy's brief, item 2)
 - New `site/dot-texture.js`, used through `<canvas class="dot-canvas" data-dot-texture>` as the first child of `#expertise`.
   - Same settings as the Focus texture in impact-map.js: navy and copper dots, the same density and sizes, opacity .07-.24, denser near the edges, a slow drift.

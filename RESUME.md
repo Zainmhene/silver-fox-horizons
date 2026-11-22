@@ -27,7 +27,10 @@
   - Repo initialised (`main`, first commit 885a423). `.claude/skills/` added to `.gitignore`.
   - Remote: https://github.com/zainmhene/silver-fox-horizons.git. Moudy's GitHub username is `zainmhene`; "ZainDStyles" is only his git display name.
   - PUBLIC + GitHub Pages: Moudy created the repo, then we push and turn on Pages (main / root).
-  - Demo link: https://zainmhene.github.io/silver-fox-horizons/site/
+  - Demo link (LIVE, checked 2026-11-22): https://zainmhene.github.io/silver-fox-horizons/site/
+    - Checked at 1440 and 390: every request loads, no console errors, stats count, map glows, no sideways scroll.
+    - `.nojekyll` is in the repo root.
+    - Pages redeploys from `main` after each push.
 - `gh` CLI is not installed.
 
 ## v3 update 16 (2026-11-22): faint dot texture in the Expertise section (Moudy's brief, item 2)

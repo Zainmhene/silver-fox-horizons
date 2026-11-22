@@ -25,9 +25,9 @@
 - The header and menu still link to `#insights`, which doesn't exist yet.
 - Git:
   - Repo initialised (`main`, first commit 885a423). `.claude/skills/` added to `.gitignore`.
-  - Remote: https://github.com/ZainDStyles/silver-fox-horizons.git
-  - Moudy chose PUBLIC + GitHub Pages and will create the empty repo on github.com himself. Then: push, and turn on Pages (main / root).
-  - The demo link will be https://zaindstyles.github.io/silver-fox-horizons/site/
+  - Remote: https://github.com/zainmhene/silver-fox-horizons.git. Moudy's GitHub username is `zainmhene`; "ZainDStyles" is only his git display name.
+  - PUBLIC + GitHub Pages: Moudy created the repo, then we push and turn on Pages (main / root).
+  - Demo link: https://zainmhene.github.io/silver-fox-horizons/site/
 - `gh` CLI is not installed.
 
 ## v3 update 16 (2026-11-22): faint dot texture in the Expertise section (Moudy's brief, item 2)

@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Silver Fox Horizons Website</title>
+<meta name="robots" content="noindex">
+<meta name="description" content="Two website design directions for Silver Fox Horizons.">
+<meta property="og:title" content="Silver Fox Horizons: website design directions">
+<meta property="og:description" content="Two design directions for review: Nocturne and Horizon.">
+<meta property="og:image" content="https://zainmhene.github.io/silver-fox-horizons/preview/previews/thumb.jpg">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* Layout: a quiet cover letter, then two equal directions side by side */
+:root{
+  --bg:#F3F1EC; --surface:#FFFFFF; --ink:#141416; --muted:#686A70; --line:#DDDAD3; --accent:#A8572F;
+  --serif:"Instrument Serif",Georgia,"Times New Roman",serif;
+  --sans:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){ --bg:#0F1012; --surface:#17181B; --ink:#ECECEE; --muted:#9B9DA4; --line:#2B2D32; --accent:#E08A5C; color-scheme:dark; }
+}
+:root[data-theme="dark"]{ --bg:#0F1012; --surface:#17181B; --ink:#ECECEE; --muted:#9B9DA4; --line:#2B2D32; --accent:#E08A5C; color-scheme:dark; }
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font:400 16px/1.6 var(--sans);-webkit-font-smoothing:antialiased;margin:0}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1280px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+@media (min-width:700px){.wrap{padding-left:max(40px,env(safe-area-inset-left,0px));padding-right:max(40px,env(safe-area-inset-right,0px))}}
+header{border-bottom:1px solid var(--line)}
+header .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-block:24px}
+.brand{font:400 22px/1 var(--serif);letter-spacing:.01em}
+.brand em{color:var(--accent)}
+.meta{font-size:13px;color:var(--muted)}
+.intro{padding-block:clamp(56px,9vw,112px) clamp(40px,6vw,72px);display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:clamp(24px,5vw,80px);align-items:end}
+.eyebrow{font:500 12px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:0 0 24px}
+h1{font:400 clamp(44px,6.4vw,92px)/1 var(--serif);letter-spacing:-.015em;margin:0;text-wrap:balance}
+h1 em{color:var(--accent)}
+.letter{color:var(--muted);font-size:17px;max-width:44ch;margin:0}
+.letter p{margin:0 0 14px}
+.letter strong{color:var(--ink);font-weight:500}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(20px,2.5vw,32px);padding-bottom:clamp(64px,8vw,104px)}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:4px;overflow:hidden;display:flex;flex-direction:column;transition:transform .6s cubic-bezier(.2,.7,.2,1),box-shadow .6s}
+.card:hover{transform:translateY(-4px);box-shadow:0 30px 60px -36px rgba(0,0,0,.45)}
+.shot{display:block;aspect-ratio:16/10;overflow:hidden;background:var(--line);max-width:100%}
+.shot img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 1.4s cubic-bezier(.2,.7,.2,1)}
+.card:hover .shot img{transform:scale(1.035)}
+.body{padding:clamp(22px,2.4vw,32px);display:flex;flex-direction:column;gap:12px;flex:1}
+.label{font:500 12px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.title{font:400 clamp(34px,3.4vw,48px)/1 var(--serif);margin:0}
+.title em{color:var(--accent)}
+.desc{color:var(--muted);margin:0;max-width:56ch}
+.facts{display:flex;flex-wrap:wrap;align-items:center;gap:10px 18px;font-size:13px;color:var(--muted);margin-top:4px}
+.sw{display:flex;gap:5px}.sw span{width:16px;height:16px;border-radius:50%;border:1px solid var(--line)}
+.pages{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
+.pages a{font-size:12px;border:1px solid var(--line);padding:6px 11px;border-radius:99px;color:var(--muted);transition:color .2s,border-color .2s}
+.pages a:hover{color:var(--ink);border-color:var(--ink)}
+.go{margin-top:auto;padding-top:14px;font:500 15px/1 var(--sans);display:inline-flex;gap:10px;align-items:center}
+.go b{color:var(--accent);font-weight:500;transition:transform .3s}
+.card:hover .go b{transform:translateX(5px)}
+.next{border-top:1px solid var(--line);padding-block:clamp(40px,5vw,64px);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:24px}
+.next h2{font:400 30px/1.1 var(--serif);margin:0}
+.next ul{margin:0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;color:var(--muted);font-size:15px}
+.next li strong{display:block;color:var(--ink);font-weight:500;margin-bottom:6px}
+footer{border-top:1px solid var(--line);font-size:13px;color:var(--muted)}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-block:24px 36px}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+@media (max-width:900px){
+  .intro,.next{grid-template-columns:minmax(0,1fr)}
+  .grid{grid-template-columns:minmax(0,1fr)}
+  .next ul{grid-template-columns:minmax(0,1fr)}
+  .meta{display:none}
+}
+@media (prefers-reduced-motion:reduce){.card,.shot img,.go b{transition:none}}
+</style>
+</head>
+<body>
+
+<header><div class="wrap"><span class="brand">Silver Fox <em>Horizons</em></span><span class="meta">Website design directions · 2026</span></div></header>
+
+<main class="wrap">
+  <section class="intro">
+    <div>
+      <p class="eyebrow">For review</p>
+      <h1>Two directions for <em>your</em> website.</h1>
+    </div>
+    <div class="letter">
+      <p><strong>Silver Fox Horizons is an international strategic advisory firm partnering with governments, institutions and businesses to strengthen state capacity, elevate global influence and unlock investment opportunities across Africa.</strong></p>
+      <p>Both directions are complete, working websites with five pages each. Please open them on your laptop and phone, scroll all the way through, and tell us which one feels most like Silver Fox Horizons.</p>
+    </div>
+  </section>
+
+  <section class="grid" aria-label="Design directions">
+    <article class="card">
+      <a class="shot" href="nocturne/index.html" aria-label="Open Nocturne"><img src="previews/nocturne.jpg" alt="Nocturne homepage: a silver serif headline over Johannesburg at night"></a>
+      <div class="body">
+        <span class="label">Direction A</span>
+        <h2 class="title"><a href="nocturne/index.html">Nocturne</a></h2>
+        <p class="desc">Africa seen from above at night, in silver. An interactive map of the continent links African capitals to London, Washington, Brussels, Dubai and Beijing, showing investment diplomacy at a glance. Calm, nocturnal and quietly powerful.</p>
+        <div class="facts"><span class="sw"><span style="background:#06080D"></span><span style="background:#D9DCE1"></span><span style="background:#7FA7FF"></span></span><span>Midnight, platinum and horizon blue</span></div>
+        <nav class="pages" aria-label="Nocturne pages"><a href="nocturne/index.html">Home</a><a href="nocturne/expertise.html">Expertise</a><a href="nocturne/about.html">About</a><a href="nocturne/insights.html">Insights</a><a href="nocturne/contact.html">Contact</a></nav>
+        <a class="go" href="nocturne/index.html">View Nocturne <b>→</b></a>
+      </div>
+    </article>
+    <article class="card">
+      <a class="shot" href="horizon/index.html" aria-label="Open Horizon"><img src="previews/horizon.jpg" alt="Horizon homepage: a serif headline over the Johannesburg skyline at sunset"></a>
+      <div class="body">
+        <span class="label">Direction B</span>
+        <h2 class="title"><a href="horizon/index.html">Horizon</a></h2>
+        <p class="desc">Cinematic and warm. A single horizon line becomes the brand's signature, from the film that opens the site to the three practices presented as chapters you scroll through sideways. Human, optimistic and assured.</p>
+        <div class="facts"><span class="sw"><span style="background:#EFE7DA"></span><span style="background:#221A14"></span><span style="background:#A84E2C"></span></span><span>Sand, earth and terracotta</span></div>
+        <nav class="pages" aria-label="Horizon pages"><a href="horizon/index.html">Home</a><a href="horizon/expertise.html">Expertise</a><a href="horizon/about.html">About</a><a href="horizon/insights.html">Insights</a><a href="horizon/contact.html">Contact</a></nav>
+        <a class="go" href="horizon/index.html">View Horizon <b>→</b></a>
+      </div>
+    </article>
+  </section>
+
+  <section class="next" aria-label="Next steps">
+    <h2>What happens next</h2>
+    <ul>
+      <li><strong>Choose a direction</strong>Or tell us what you like from each. We can combine elements.</li>
+      <li><strong>Send your materials</strong>Logo, biographies, photography and contact details replace the placeholders.</li>
+      <li><strong>Refine and launch</strong>We polish the chosen design with you and put it live on your domain.</li>
+    </ul>
+  </section>
+</main>
+
+<footer><div class="wrap"><span>Design preview. Not yet public. Photography and film from Pexels; placeholders are marked “to be confirmed”.</span><a href="https://tsugidigital.com">Website by TSUGI</a></div></footer>
+</body>
+</html>
